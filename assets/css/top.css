@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* ---------------------------------------------------
+&EARTH with WOOD 追加時用
+※掲載期間が終わってスライダーが4枚に戻る場合は、index.phpのスライダーのナンバリングを戻し、下記まとめて消去推奨。
+--------------------------------------------------- */
+.p-top .slide-img-03{
+  background: url(/assets/images/index/kv05_pc.png) no-repeat center/cover;
+}
+.p-top .kv-earthWithWood{
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.4));
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+.p-top .slide-img-04{
+  background: url(/assets/images/index/kv03_pc.png) no-repeat center/cover;
+}
+.p-top .slide-img-05{
+  background: url(/assets/images/index/kv04_pc.png) no-repeat center/cover;
+}
+@media screen and (max-width: 1024px){
+  .p-top .heading-kv img{
+    width: 280px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px){
+  .p-top .slide-img-03{
+    background: url(/assets/images/index/kv05_sp.png) no-repeat center/cover;
+  }
+  .p-top .slide-img-04{
+    background: url(/assets/images/index/kv03_sp.png) no-repeat center/cover;
+  }
+  .p-top .slide-img-05{
+    background: url(/assets/images/index/kv04_sp.png) no-repeat center/cover;
+  }
+}
+
+
+/* ---------------------------------------------------
+共通ヘッダー
+--------------------------------------------------- */
+header.globalnav nav .globalnav-body .globalnav-left a {
+  padding-right: 0;
+}
+
+header.globalnav nav .globalnav-body .globalnav-left .globalnav-item {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 1543px) {
+  header.globalnav nav .globalnav-body .globalnav-left .globalnav-item {
+    /* font-size: 1.5rem; */
+    font-size: 1.4rem;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  header.globalnav nav .globalnav-body .globalnav-left .globalnav-item:hover span:after,
+  header.globalnav nav .globalnav-body .globalnav-left .globalnav-item .active span:after,
+  header.globalnav nav .globalnav-body .globalnav-left a:hover span:after,
+  header.globalnav nav .globalnav-body .globalnav-left a .active span:after {
+    width: 100%;
+  }
+}
+
+/* 20230120追記:ここから トップ グローバルナビゲーション リンク先ボタン追加 */
+header.globalnav nav .globalnav-body .globalnav-btn-reform{
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  padding: 7px 10px;
+  background: #bf0000;
+  color: #fff;
+  transition: 0.15s ease-in-out;
+  margin: 0;
+  text-align: center;
+  min-width: 170px;
+}
+
+header.globalnav nav .globalnav-body .globalnav-btn-reform:hover{
+  background: #333;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header.globalnav nav .globalnav-body .globalnav-btn-reform{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    min-width: 140px;
+  }
+}
+/* 20230120追記:ここまで */
+
+
+/* ---------------------------------------------------
+TOPページ　実例紹介スライダー
+--------------------------------------------------- */
+.p-top-slickWorks.block-type02 .item-tag {
+  padding: 6px;
+}
+.p-top-slickWorks.block-type02 .item-name {
+  line-height: 1.5;
+}
+@media screen and (max-width: 991px) {
+  .p-top-slickWorks.block-type02 .item-tag {
+    width: fit-content;
+  }
+}
+
+
+
+/* ---------------------------------------------------
+TOPページ　ライフスタイル
+--------------------------------------------------- */
+
+.p-top .top-lifestyle-list {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.p-top .top-lifestyle-list .section-inner-large__item {
+  flex: 0 0 30.978%;
+  max-width: 30.978%;
+  margin-right:  1vh;
+  margin-left: 1vh;
+  margin-bottom: 20px;
+}
+
+.p-top .top-lifestyle-list .section__link img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .p-top .top-lifestyle-list .section-inner-large__item {
+    margin-right:  1vw;
+    margin-left: 1vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-top .top-lifestyle-list {
+    justify-content: space-between;
+  }
+  .p-top .top-lifestyle-list .section-inner-large__item {
+    flex: 0 0 48.771%;
+    max-width: 48.771%;
+    margin: 0;
+  }
+}
+
+

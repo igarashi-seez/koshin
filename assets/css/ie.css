@@ -1,0 +1,74 @@
+﻿_:-ms-lang(x), body > .index .section-mv{
+    position: relative;
+}
+_:-ms-lang(x), body > .index .section-mv video {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+_:-ms-lang(x), .globalnav sup {
+    font-size: 2.4rem!important;
+}
+
+_:-ms-lang(x), footer sup {
+    font-size: 2.4rem!important;
+}
+
+/* for IE11 */
+_:-ms-lang(x)::-ms-backdrop, .icon-pin {
+    background-size: 20px 28px!important;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .globalnav-sub .icons {
+    position: relative;
+    top: -0.2em;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .footer-subnav .buttons .btn {
+    position: relative;
+    padding-top: 10px!important;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .footer-subnav .buttons .btn .icon-mail {
+    position: relative;
+    top: -3px;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .footer-subnav .icons a .icon-youtube {
+    position: relative;
+    top: 3px;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .list-type-tree a:before {
+    top: 0.6em!important;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .icon-arrow-right:before {
+    top: 0.05em!important;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .globalnav .globalnav-right a {
+    position: relative;
+    top: -0.6em!important;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .reform .globalnav .globalnav-right a {
+    position: relative;
+    top: 0em!important;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .globalnav .globalnav-sub .button a i {
+    position: relative;
+    top: -0.2em!important;
+}
+
+
+_:-ms-lang(x)::-ms-backdrop, .nav-pills-type01 .item a:before {
+    border: 0px;
+}
+
+_:-ms-lang(x)::-ms-backdrop, body {
+    border: 0px;
+}

@@ -1,0 +1,58 @@
+ /* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+@include _responsive(".u-fz-12") {
+  font-size: 1.2rem !important;
+}
+@include _responsive(".u-fz-13") {
+  font-size: 1.3rem !important;
+}
+@include _responsive(".u-fz-14") {
+  font-size: 1.4rem !important;
+}
+@include _responsive(".u-fz-18") {
+  font-size: 1.8rem !important;
+}
+@include _responsive(".u-fz-16") {
+  font-size: 1.6rem !important;
+}
+@include _responsive(".u-fz-20") {
+  font-size: 2rem !important;
+}
+@include _responsive(".u-fz-22") {
+  font-size: 2.2rem !important;
+}
+@include _responsive(".u-fz-24") {
+  font-size: 2.4rem !important;
+}
+@include _responsive(".u-fz-26") {
+  font-size: 2.6rem !important;
+}
+@include _responsive(".u-fz-28") {
+  font-size: 2.8rem !important;
+}
+@include _responsive(".u-fz-30") {
+  font-size: 3rem !important;
+}
+@include _responsive(".u-fz-32") {
+  font-size: 3.2rem !important;
+}
+@include _responsive(".u-fz-34") {
+  font-size: 3.4rem !important;
+}
+@include _responsive(".u-fz-40") {
+  font-size: 4rem !important;
+}
+@include _responsive(".u-fz-56") {
+  font-size:5.6rem !important;
+}

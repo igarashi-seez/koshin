@@ -1,0 +1,31 @@
+ /* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+@include _responsive(".u-ls-n10") {
+  letter-spacing: -.01em !important;
+}
+@include _responsive(".u-ls-n20") {
+  letter-spacing: -.02em !important;
+}
+@include _responsive(".u-ls-40") {
+  letter-spacing: .04em !important;
+}
+@include _responsive(".u-ls-80") {
+  letter-spacing: .08em !important;
+}
+@include _responsive(".u-ls-140") {
+  letter-spacing: .14em !important;
+}
+@include _responsive(".u-ls-180") {
+  letter-spacing: .18em !important;
+}

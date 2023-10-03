@@ -1,0 +1,28 @@
+ /* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+@include _responsive(".u-lh-1") {
+  line-height: 1 !important;
+}
+@include _responsive(".u-lh-11") {
+  line-height: 1.1 !important;
+}
+@include _responsive(".u-lh-15") {
+  line-height: 1.5 !important;
+}
+@include _responsive(".u-lh-2") {
+  line-height: 2 !important;
+}
+@include _responsive(".u-lh-22") {
+  line-height: 2.2 !important;
+}

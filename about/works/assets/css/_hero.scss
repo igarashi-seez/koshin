@@ -1,0 +1,40 @@
+
+.wk-hero__inner {
+  margin-top: -10.5%;
+  padding: 17% 0 7%;
+  background-image: url(/assets/images/about/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wk-hero__content {
+  position: relative;
+}
+
+.wk-hero__copy {
+  font-size: 3.2rem;
+  line-height: 1.1875;
+}
+
+.wk-hero__figure {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  right: 5%;
+}
+
+@include _mq-down('ml'){
+
+  .wk-hero__copy {
+    font-size: 2.4rem;
+  }
+}
+
+@include _mq-down('md'){
+  .wk-hero__inner {
+    margin-top: -19%;
+    padding: 25% 0 13%;
+    background-image: url(/assets/images/about/bg_sp.jpg);
+  }
+}

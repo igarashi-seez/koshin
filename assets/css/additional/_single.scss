@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// #Single
+// -----------------------------------------------------------------------------
+
+// 各HTMLファイル専用のscssファイルで読み込む変数と関数をまとめています。
+// variable, function, mixinレイヤーでファイルを追加した場合はこのファイルにも追記してください。
+// `/css/single.scss` では以下のパスでインポートします。
+// @import "../assets/css/_single";
+@import "foundation/variable/_global";
+@import "foundation/variable/_breakpoint";
+@import "foundation/variable/_font-family";
+@import "foundation/variable/_color";
+@import "foundation/variable/_z-index";
+@import "foundation/variable/_easing";
+@import "foundation/variable/_img-dir";
+
+@import "foundation/function/_tint";
+@import "foundation/function/_shade";
+@import "foundation/function/_z-index";
+
+@import "foundation/mixin/_mq-up";
+@import "foundation/mixin/_mq-down";
+@import "foundation/mixin/_responsive";
+@import "foundation/mixin/_on-event";
+@import "foundation/mixin/_sr-only";
+@import "foundation/mixin/_list-mark";
+@import "foundation/mixin/_list-unstyled";
+@import "foundation/mixin/_ratio";

@@ -1,0 +1,2913 @@
+@charset "UTF-8";
+/**
+ * VARIABLE
+ * global...サイト全体に使用するサイズや数値に関する変数です。
+ * breakpoint...メディアクエリで使用するブレイクポイントです。
+ * font-family...font-family指定をまとめています。
+ * color...グローバルに使用する色指定です。
+ * z-index...z-indexの並び順を管理します。
+ * easing...cubic-bezier関数を使用したタイミング関数を定義しています。
+ *
+ * FUNCTION
+ * strip-unit...pxやremなどの単位を取り除きます。
+ * em...pxをemに変換します。
+ * rem...pxをremに変換します。
+ * tint...白色を加えて明度を明るくします。
+ * shade...黒色を加えて明度を暗くします。
+ * z-index...z-indexの並び順を管理します。
+ * tracking...Photoshopのカーニングをemに変換します。
+ *
+ * MIXIN
+ * mq-up...メディアクエリを`min-width`で挿入します。
+ * mq-down...メディアクエリを`max-width`で挿入します。
+ * responsive...レスポンシブ対応クラスを生成します。
+ * clearfix...floatの解除をします。
+ * on-event...:hover, :active, :focusをまとめて指定します。
+ * sr-only...非表示にしてスクリーンリーダーにだけ読み上げさせます。
+ * layout...layoutオブジェクトのベーススタイルです。
+ * media...mediaオブジェクトのベーススタイルです。
+ * flag...flagオブジェクトのベーススタイルです。
+ * list-unstyled...list-unstyledオブジェクトのベーススタイルです。
+ * list-mark...list-markオブジェクトのベーススタイルです。
+ * ratio...ratioオブジェクトのベーススタイルです。
+ * box...boxオブジェクトのベーススタイルです。
+ *
+ * BASE
+ * normalize...Normalize.cssをインポートしています。
+ * base...タイプセレクタと属性セレクタのデフォルトスタイルです。
+ *
+ * LAYOUT
+ * header...`<body>`タグ直下にある`<header>`タグのスタイルです。
+ * footer...`<body>`タグ直下にある`<footer>`タグのスタイルです。
+ * main...`<main>`タグのスタイルです。
+ * content...`<article>`タグが使われるようなメインコンテンツのスタイルです。
+ * sidebar...`<aside>`タグが使われるようなサイドバーのスタイルです。
+ * section...`<section>`要素を使うようなセクションの余白を管理します。
+ *
+ * COMPONENT
+ * wrapper...最大幅を指定します。
+ * layout...汎用的なレイアウトオブジェクトです。グリッドレイアウトなどに使用できます。
+ * media...画像とテキストが横並びになるオブジェクトです。テキストを画像に回り込みさせます。
+ * flag...画像とテキストが横並びになるオブジェクトです。縦方向の指定ができます。
+ * list-unstyled...`<ul>`と`<ol>`でデフォルトスタイルをリセットします。
+ * list-ordered...番号付きリストを入れ子レベルに応じて、1, 1.1のように区切り文字を付け加えます。
+ * list-mark...リストアイテムの左にアイコンを配置します。
+ * embed...Youtubeなどをアスペクト比を固定してレスポンシブ対応させる場合に使用します。
+ * ratio...アスペクト比を固定したまま伸縮させます。
+ * table...tableのレイアウトアルゴリズムの変更、余白の変更をします。
+ *
+ * PROJECT
+ * icon...アイコンフォントです。テンプレートから自動で生成されます。
+ * icon-extend...アイコンフォントを拡張するModifierです。
+ * button...ボタンコンポーネントです。
+ * breadcrumb...パンくずリストコンポーネントです。
+ * label...インラインのラベルコンポーネントです。
+ * badge...投稿数のような数値を表示するバッジコンポーネントです。
+ * box...画像やテキストなどを縦に並べるコンポーネントです。
+ * card...カードタイプのコンポーネントです。
+ *
+ * SCOPE
+ * blog...ブログページのスタイルです。
+ *
+ * UTILITY
+ * text...テキストのスタイルに関する汎用クラスです。
+ * align...画像などを中央や右側に配置します。
+ * margin...マージンで余白の管理をします。常に下方向にだけ余白をとります。
+ * display...要素の表示や改行をコントロールする場合に使用します。
+ * width...おもにグリッドで使用する`width`を指定する汎用クラスです。
+ * offset...おもにグリッドで使用する`margin-right`を指定する汎用クラスです。
+ * percent...`width`プロパティを5%刻みで指定する汎用クラスです。
+ * sr-only...要素を非表示にさせますが、スクリーンリーダーには読み上げられます。
+ */
+/**
+ * このスタイルシートは[FLOCSS](https://github.com/hiloki/flocss)をベースにしています。
+ * 定義されているレイヤー以外にもThemeやTestなどのレイヤーを追加することもできます。
+ * 詳しくは[CSSコーディングルール](https://github.com/manabuyasuda/styleguide/blob/master/css-coding-rule.md#flocss)を参照してください。
+ */
+/* =============================================================================
+   #Foundation
+   ========================================================================== */
+/**
+ * Foundationレイヤーでは`html`や`body`のような広範囲にわたるベーススタイル、
+ * `h2`や`ul`のような基本的なタイプセレクタのデフォルトスタイルを定義します。
+ * 装飾的なスタイルは避けて、できる限り低詳細度に保ちます。idセレクタやclassセレクタは使用しません。
+ */
+/* #Normalize.css
+   -------------------------------------------------------------------------- */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+  padding: 0;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+  padding: 0;
+  border: none;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* #Base
+   -------------------------------------------------------------------------- */
+/**
+ * Baseレイヤーにはプロジェクトにおける、基本的なベーススタイルを定義します。
+ * 要素セレクタや属性セレクタなど、詳細度はできるかぎり低く保っておきます。
+ * 基本的にclass属性は使用しません。
+ */
+/**
+ * `padding`と`border`を`width`に含めます。
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+@font-face {
+  font-family: 'futura-light-bt';
+  src: url("/assets/font/futura-light-bt.ttf") format("truetype");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'futura-light-bt',"游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-weight: 400;
+  /* アンチエイリアスを指定する */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  /* メトリクスカーニングを指定する */
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  color: #2e2e2e;
+}
+
+ul, ol {
+  padding-left: 0;
+  cursor: auto;
+}
+
+/**
+ * ネストされたリストのマージンをリセットします。
+ */
+li > ul, li > ol {
+  margin-bottom: 0;
+}
+
+/**
+ * `dt`と`dd`の左端を揃えます。
+ */
+dd {
+  margin-left: 0;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+/**
+ * フルードイメージにします。
+ */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/**
+ * IEでSVGがフルードイメージにならない不具合があります。
+ * 属性値が`.svg`で終わる要素に適応します。
+ */
+/**
+ * 日本語では斜体を使用しないためリセットします。
+ */
+i,
+cite,
+em,
+address,
+dfn {
+  font-style: normal;
+}
+
+code,
+pre {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+code {
+  padding: 0.2em;
+  border-radius: 3px;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+pre code {
+  padding: 0;
+  font-size: 0.8em;
+  background-color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+form,
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* =============================================================================
+   #Layout
+   ========================================================================== */
+/**
+ * Layoutレイヤーはヘッダーやフッターのような、ページを構成するコンテナブロックのスタイルを定義します。
+ * 目安としてはワイヤーフレームに書かれるような大きな単位のブロックです。
+ * 汎用性のあるグリッドシステムは次のObject/Componentレイヤーで定義します。
+ * グローバルナビゲーションやコピーライトのようなコンポーネントは、Object/Projectレイヤーで定義します。
+ * 基本的にはclass属性を使用しますが、id属性を使用することもできます。
+ * プレフィックス（接頭辞）として`l-`をつけます。
+ */
+/* #Main
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: main
+name: main
+categories: [layout]
+---
+
+`<main>`タグのスタイルです。ドキュメントのメインコンテンツを示し、ドキュメント内で1つしか記述できません。
+<article>タグや<nav>タグなどの中に入れることはできません。
+
+取り扱いの難しいタグなので、使わないという選択をするのもいいでしょう。
+
+```block
+<body>
+  <main id="l-main">
+  </main>
+</body>
+```
+*/
+/* #Content
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: content
+name: content
+categories: [layout]
+---
+
+`<article>`タグが使われるようなメインコンテンツのスタイルです。
+ナビゲーションやバナーなどのレイアウトを含むことはできますが、
+コンポーネント自体はobject/projectレイヤーで定義します。
+
+```block
+<body>
+  <article class="l-content s-blog">
+    <header class="l-content__lead"></header>
+  </article>
+</body>
+```
+*/
+/* #Section
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: section
+name: section
+categories: [layout]
+---
+
+`<section>`タグを使うようなセクションの余白（`margin`）を管理します。
+コンポーネント単位での余白はobject/utility/_margin.scssで管理をします。
+
+サイズはデフォルトで3つ、最大で5つとします。
+
+1. tiny(optional)
+2. small
+3. medium(default)
+4. large
+5. huge(optional)
+
+Modifierなしをmedium、変更する場合にはModifierを指定します。
+
+```block
+<div class="l-section">
+  <h2>見出し2</h2>
+</div>
+
+<div class="l-section l-section--small">
+  <h2>見出し2</h2>
+</div>
+
+<div class="l-section l-section--large">
+  <h2>見出し2</h2>
+</div>
+```
+*/
+.l-section {
+  width: 100%;
+  padding: 6.4rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .l-section {
+    padding: 9.6rem 0;
+  }
+}
+
+/* =============================================================================
+   #Object
+   ========================================================================== */
+/**
+ * Objectレイヤーはプロジェクトにおけるビジュアルパターンです。抽象度や詳細度、
+ * 拡張性などによって、4つのレイヤーにわけられます。
+ * それぞれのレイヤーにはプレフィックス（接頭辞）をつけます。
+ * 1. Component（`c-`）
+ * 2. Project（`p-`）
+ * 3. Scope(`s-`)
+ * 4. Utility（`u-`）
+ *
+ * ランディングページのようにページ特有のスタイルを多く含む場合は、
+ * ページ専用のCSSファイルを作成することもできます。
+ * ページ専用のスタイルは、そのページにだけ読み込ませることでスコープをつくり、
+ * プレフィックス（接頭辞）をつけないことで名前の重複を防ぎます。
+ */
+/* -----------------------------------------------------------------------------
+   #Component
+   -------------------------------------------------------------------------- */
+/**
+ * Componentレイヤーは多くのプロジェクトで横断的に再利用のできるような、小さな単位のモジュール（機能）です。
+ * OOCSSの構造（structure）の機能を担うため、装飾的なスタイルをできるだけ含めないようにします。
+ * また、`width`や`margin`といったレイアウトに影響を与えるプロパティもできるだけ含めないようにします。
+ * 例えばgridやmediaといったレイアウトパターンが該当します。
+ * プレフィックス（接頭辞）として`c-`をつけます。
+ */
+/* #Wrapper
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: wrapper
+name: wrapper
+categories: [component]
+---
+
+横幅を制限するオブジェクトです。
+
+Modifierは以下のとおりです。
+
+* 左右の余白を追加 `--small`, `--medium`, `--large`
+
+```block
+<div class="c-wrapper" style="background-color:#eee;margin-bottom:1rem;">c-wrapper</div>
+<div class="c-wrapper c-wrapper--medium" style="background-color:#eee;margin-bottom:1rem;">c-wrapper c-wrapper--medium</div>
+<div class="c-wrapper u-8of12" style="background-color:#eee;">c-wrapper u-8of12</div>
+```
+*/
+.c-wrapper {
+  width: 100%;
+  max-width: 108rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .c-wrapper {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.c-wrapper--small {
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .c-wrapper--small {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+.c-wrapper--medium {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c-wrapper--large {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* #List-unstyled
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: list-unstyled
+name: list-unstyled
+categories: [component]
+---
+
+`<ul>`と`<ol>`のデフォルトスタイルをリセットします。
+
+```block
+<ul class="c-list-unstyled">
+  <li>リスト1
+  <ul class="c-list-unstyled__items">
+    <li>リスト1.1
+    <ul class="c-list-unstyled__items">
+      <li>リスト1.1.1</li>
+      <li>リスト1.1.2</li>
+    </ul>
+    </li>
+    <li>リスト1.2</li>
+  </ul>
+  </li>
+  <li>リスト2</li>
+  <li>リスト3</li>
+</ul>
+```
+*/
+/* ul, ol */
+.c-list-unstyled {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* li > ul, li > ol */
+.c-list-unstyled__items {
+  margin-left: 1em;
+  text-indent: -1em;
+  list-style-position: inside;
+}
+
+/* #List-ordered
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: list-ordered
+name: list-ordered
+categories: [component]
+---
+
+番号付きリストを入れ子レベルに応じて、1, 1.1のように区切り文字を付け加えます。
+
+```block
+<ol class="c-list-ordered">
+  <li class="c-list-ordered__item">リスト1
+  <ol class="c-list-ordered__items">
+    <li class="c-list-ordered__item">リスト1.1
+    <ol class="c-list-ordered__items">
+      <li class="c-list-ordered__item">リスト1.1.1</li>
+      <li class="c-list-ordered__item">リスト1.1.2</li>
+    </ol>
+    </li class="c-list-ordered__item">
+    <li class="c-list-ordered__item">リスト1.2</li>
+  </ol>
+  </li class="c-list-ordered__item">
+  <li class="c-list-ordered__item">リスト2</li>
+</ol>
+```
+*/
+/* ul */
+.c-list-ordered {
+  display: table;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* ul > li */
+.c-list-ordered__item {
+  display: table-row;
+  counter-increment: ordered;
+}
+
+.c-list-ordered__item:before {
+  content: counters(ordered, ".") " ";
+  display: table-cell;
+  padding-right: 0.5em;
+  text-align: right;
+}
+
+/* li > ul */
+.c-list-ordered__items {
+  counter-reset: ordered;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* #List-mark
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: list-mark
+name: list-mark
+categories: [component]
+---
+
+リストアイテムの左にアイコンを配置します。`.p-icon`で任意のアイコンを表示させます。
+複数行になった場合はテキストの位置で左揃えになります。
+
+アイコンのサイズは以下のmodifierで変更できます。
+
+- `.c-list-mark__icon--small`
+- `.c-list-mark__icon--large`
+
+```block
+<ul class="c-list-mark">
+  <li class="c-list-mark__item"><span class="c-list-mark__icon p-icon p-icon--home" aria-hidden="true"></span>リスト1
+  <ul class="c-list-mark__items">
+    <li class="c-list-mark__item"><span class="c-list-mark__icon c-list-mark__icon--small p-icon p-icon--home" aria-hidden="true"></span>リスト1.1
+    </li>
+    <li class="c-list-mark__item"><span class="c-list-mark__icon"></span>リスト1.2</li>
+  </ul>
+</ul>
+```
+*/
+/* ul */
+.c-list-mark {
+  display: table;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* ul > li */
+.c-list-mark__item {
+  display: table-row;
+}
+
+/* li > span */
+.c-list-mark__icon {
+  display: table-cell;
+  width: 1em;
+  padding-right: 0.25em;
+  text-align: center;
+}
+
+/* li > ul */
+.c-list-mark__items {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.c-list-mark__icon--small {
+  width: 0.8em;
+}
+
+.c-list-mark__icon--small:before {
+  font-size: 0.8em;
+}
+
+.c-list-mark__icon--large {
+  width: 1.2em;
+}
+
+.c-list-mark__icon--large:before {
+  font-size: 1.2em;
+}
+
+.c-list__num {
+  float: left;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .c-list__num {
+    font-size: 2.4rem;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   #Project
+   -------------------------------------------------------------------------- */
+/**
+ * Projectレイヤーはプロジェクト固有のパターンで、複数のページで使い回せるようなコンポーネントです。
+ * 具体的なスタイルを持つUI（ユーザーフェイス）で、追加されるコンポーネントのほとんどはこのレイヤーに置かれます。
+ * もし、このレイヤーで同じパターンが3箇所で使われていたら、別のコンポーネントとしてまとめられないか検討しましょう。
+ * プレフィックス（接頭辞）として`p-`をつけます。
+ */
+.p-member {
+  line-height: 1.5;
+}
+
+.p-member h3 {
+  font-size: 4rem;
+}
+
+.p-member__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.p-member__item {
+  width: 22%;
+}
+
+.p-member__item a:hover, .p-member__item a:active, .p-member__item a:focus {
+  text-decoration: none;
+  opacity: .7;
+}
+
+.p-member__item p {
+  font-size: 1.3rem;
+}
+
+.p-member__item p span {
+  font-size: 2rem;
+}
+
+.p-member__item + .p-member__item {
+  margin-left: 4%;
+}
+
+@media screen and (max-width: 767px) {
+  .p-member h3 {
+    font-size: 3.2rem;
+  }
+  .p-member__list {
+    margin-top: -2.6rem;
+  }
+  .p-member__item {
+    width: 44%;
+    margin-top: 4rem;
+  }
+  .p-member__item p span {
+    font-size: 1.8rem;
+  }
+  .p-member__item + .p-member__item {
+    margin-left: 0;
+  }
+  .p-member__item:nth-of-type(2n) {
+    margin-left: 12%;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   #Scope
+   -------------------------------------------------------------------------- */
+/**
+ * ComponentレイヤーやProjectレイヤーのようなコンポーネント単位ではなく、
+ * ページ単位や任意の範囲（スコープ）でのスタイルを定義します。1箇所でしか使わないような特異なスタイルや、
+ * ページ単位でComponentやProjectレイヤーのスタイルを微調整したい場合に使用してもかまいません。
+ * 例えばブログページのスタイルとして_blog.scssを作成します。
+ * このレイヤーでは`.s-blog p`のような要素セレクタとの結合子も使うこともできます。
+ * もし、このレイヤーで同じパターンが3箇所で使われていたら、
+ * ProjectレイヤーやUtilityレイヤーでまとめられないか検討しましょう。
+ * プレフィックス（接頭辞）として`s-`をつけます。
+ */
+/* -----------------------------------------------------------------------------
+   #Utility
+   -------------------------------------------------------------------------- */
+/**
+ * Utilityレイヤーはいわゆる汎用クラスで、ほとんどの場合は単一のスタイルをもっています。
+ * コンポーネント間の間隔を調整したり、BEMのModifierが増えすぎるのを防ぎます。
+ * `.mb10`のような具体的な名前より`.mb-small`のような相対的な名前にしたり、
+ * pxよりもemや%で指定することを推奨します。
+ * 確実にスタイルを適応させるために`!important`を使用します。
+ * プレフィックス（接頭辞）として`u-`をつけます。
+ */
+/* -----------------------------------------------------------------------------
+   #Text
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: text
+name: text
+categories: [utility]
+---
+
+テキストのスタイルを指定する汎用クラスです。
+
+```block
+<p class="u-text-light">font-weight 300</p>
+<p class="u-text-normal">font-weight 400</p>
+<p class="u-text-bold">font-weight 600</p>
+<p class="u-text-indent">先頭の1文字目を1文字分字下げします。</p>
+<p class="u-text-note">2行目以降の1文字目を1文字分字下げします。<br>2行目以降の1文字目を1文字分字下げします。</p>
+<p class="u-text-nowrap">テキストを折り返させません。横幅を超えても、このテキストは折り返さずに表示されます。</p>
+<p class="u-text-breakword">テキストを折り返させます。長文になっても、このテキストは必ず折り返して表示されます。</p>
+<p class="u-text-justify">テキストを両端揃え（均等割り付け）させます。通常のテキストと文字間が違うのが分かると思います。</p>
+<p class="u-text-none">記述した通りに表示します。</p>
+<p class="u-text-lowercase">abcdEFGH すべての英単語を小文字で表示します。</p>
+<p class="u-text-uppercase">abcdEFGH すべての英単語を大文字で表示します。</p>
+<p class="u-text-capitalize">abcdEFGH 英単語の先頭を大文字で表示します。</p>
+<p class="u-text-smallcaps">abcdEFGH スモールキャップ（小文字と同じ高さで作られた大文字）で表示します。</p>
+<p class="u-text-vertical">abcdEFGH 縦書きで表示します。</p>
+<p class="u-text-vertical u-text-vertical--upright">abcdEFGH 英文も縦書きにする場合はModifierを指定します。</p>
+<p class="u-text-right">text-align right</p>
+<p class="u-text-center">text-align center</p>
+<p class="u-text-left">text-align left</p>
+<p class="u-text-top">vertical-align top</p>
+<p class="u-text-middle">vertical-align middle</p>
+<p class="u-text-bottom">vertical-align bottom</p>
+```
+*/
+/* font-weightを指定します。 */
+.u-text-light {
+  font-weight: 300 !important;
+}
+
+.u-text-normal {
+  font-weight: 400 !important;
+}
+
+.u-text-medium {
+  font-weight: 500 !important;
+}
+
+.u-text-bold {
+  font-weight: 700 !important;
+}
+
+/* 先頭の1文字目を1文字分字下げします。 */
+.u-text-indent {
+  text-indent: 1em !important;
+}
+
+/* 2行目以降の1文字目を1文字分字下げします。 */
+.u-text-note {
+  margin-left: 1em !important;
+  text-indent: -1em !important;
+}
+
+/* テキストを改行させません。 */
+.u-text-nowrap {
+  white-space: nowrap !important;
+}
+
+/* テキストを改行させます。 */
+.u-text-breakword {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* テキストを両端揃えさせます。 */
+.u-text-justify {
+  text-align: justify !important;
+  text-justify: inter-ideograph !important;
+}
+
+/* 記述した通りに表示します。 */
+.u-text-none {
+  text-transform: none !important;
+}
+
+/* すべての英単語を小文字にします。 */
+.u-text-lowercase {
+  text-transform: lowercase !important;
+}
+
+/* すべての英単語を大文字にします。 */
+.u-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+/* 英単語の先頭を大文字にします。 */
+.u-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+/* スモールキャップ（小文字と同じ高さで作られた大文字）にします。 */
+.u-text-smallcaps {
+  font-variant: small-caps !important;
+}
+
+/* 縦書きにします。 */
+.u-text-vertical {
+  -webkit-writing-mode: vertical-rl !important;
+      -ms-writing-mode: tb-rl !important;
+          writing-mode: vertical-rl !important;
+  -webkit-text-orientation: mixed !important;
+          text-orientation: mixed !important;
+}
+
+/* テキスト強調赤ドット */
+.u-text-reddot {
+  -webkit-text-emphasis: filled dot #bf0000 !important;
+          text-emphasis: filled dot #bf0000 !important;
+}
+
+/* 英文も縦書きにする場合はModifierを指定します。 */
+.u-text-vertical--upright {
+  -webkit-text-orientation: upright !important;
+          text-orientation: upright !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-top {
+  vertical-align: top !important;
+}
+
+.u-text-middle {
+  vertical-align: middle !important;
+}
+
+.u-text-bottom {
+  vertical-align: bottom !important;
+}
+
+/* テキストの色を指定します。 */
+.u-text-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* テキストの色を指定します。 */
+.u-text-wh {
+  color: #fff !important;
+}
+
+.u-text-red {
+  color: #bf0000 !important;
+}
+
+.u-text-gray {
+  color: #808080 !important;
+}
+
+/* #Display
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: display
+name: display
+categories: [utility]
+---
+
+表示非表示を切り替えます。改行位置のコントロールもできます。
+
+```block
+<p class="u-dn-md"><code>$-md</code>以降は非表示になります。</p>
+<p class="u-dn u-db-md"><code>$-md</code>以降は表示されます。</p>
+<p>基本はなりゆきでウィンドウサイズが狭くなると、<span class="u-dib">ここから改行されます。</span></p>
+<p><code>$-md</code>以降になると、<span class="u-db-md">ここから改行されます。</span></p>
+```
+*/
+.u-dn {
+  display: none !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-dn-sm {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-dn-md {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-dn-ml {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-dn-lg {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-dn-xl {
+    display: none !important;
+  }
+}
+
+.u-db {
+  display: block !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-db-sm {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-db-md {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-db-ml {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-db-lg {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-db-xl {
+    display: block !important;
+  }
+}
+
+.u-di {
+  display: inline !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-di-sm {
+    display: inline !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-di-md {
+    display: inline !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-di-ml {
+    display: inline !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-di-lg {
+    display: inline !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-di-xl {
+    display: inline !important;
+  }
+}
+
+.u-dib {
+  display: inline-block !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-dib-sm {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-dib-md {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-dib-ml {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-dib-lg {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-dib-xl {
+    display: inline-block !important;
+  }
+}
+
+/* #Percent
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: percent
+name: percent
+categories: [utility]
+---
+
+`width`プロパティを5%刻みで指定する汎用クラスです。おもに`.c-table--fixed`と一緒に指定します。
+
+```block
+<div class="c-wrapper">
+  <table class="c-table c-table--medium c-table--fixed">
+    <tr>
+      <th class="u-percent50">th1</th>
+      <th>th2</th>
+      <th>th3</th>
+    </tr>
+    <tr>
+      <td>td1</td>
+      <td>td2</td>
+      <td>td3</td>
+    </tr>
+  </table>
+</div>
+```
+*/
+.u-percent5 {
+  width: 5% !important;
+}
+
+.u-percent10 {
+  width: 10% !important;
+}
+
+.u-percent15 {
+  width: 15% !important;
+}
+
+.u-percent20 {
+  width: 20% !important;
+}
+
+.u-percent25 {
+  width: 25% !important;
+}
+
+.u-percent30 {
+  width: 30% !important;
+}
+
+.u-percent35 {
+  width: 35% !important;
+}
+
+.u-percent40 {
+  width: 40% !important;
+}
+
+.u-percent45 {
+  width: 45% !important;
+}
+
+.u-percent50 {
+  width: 50% !important;
+}
+
+.u-percent55 {
+  width: 55% !important;
+}
+
+.u-percent60 {
+  width: 60% !important;
+}
+
+.u-percent65 {
+  width: 65% !important;
+}
+
+.u-percent70 {
+  width: 70% !important;
+}
+
+.u-percent75 {
+  width: 75% !important;
+}
+
+.u-percent80 {
+  width: 80% !important;
+}
+
+.u-percent85 {
+  width: 85% !important;
+}
+
+.u-percent90 {
+  width: 90% !important;
+}
+
+.u-percent95 {
+  width: 95% !important;
+}
+
+.u-percent100 {
+  width: 100% !important;
+}
+
+/* #Sr-only
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: sr-only
+name: sr-only
+categories: [utility]
+---
+
+要素を非表示にさせますが、スクリーンリーダーには読み上げられます。
+
+```block
+<div>
+  <span class="p-icon p-icon--rss" aria-hidden="true"></span>
+  <span class="u-sr-only">rss購読</span>
+</div>
+```
+*/
+.u-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+
+.u-clearfix::after {
+  content: '';
+  display: block !important;
+  clear: both !important;
+}
+
+/* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+.u-fz-12 {
+  font-size: 1.2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-12-sm {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-12-md {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-12-ml {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-12-lg {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-12-xl {
+    font-size: 1.2rem !important;
+  }
+}
+
+.u-fz-13 {
+  font-size: 1.3rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-13-sm {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-13-md {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-13-ml {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-13-lg {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-13-xl {
+    font-size: 1.3rem !important;
+  }
+}
+
+.u-fz-14 {
+  font-size: 1.4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-14-sm {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-14-md {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-14-ml {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-14-lg {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-14-xl {
+    font-size: 1.4rem !important;
+  }
+}
+
+.u-fz-18 {
+  font-size: 1.8rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-18-sm {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-18-md {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-18-ml {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-18-lg {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-18-xl {
+    font-size: 1.8rem !important;
+  }
+}
+
+.u-fz-16 {
+  font-size: 1.6rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-16-sm {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-16-md {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-16-ml {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-16-lg {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-16-xl {
+    font-size: 1.6rem !important;
+  }
+}
+
+.u-fz-20 {
+  font-size: 2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-20-sm {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-20-md {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-20-ml {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-20-lg {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-20-xl {
+    font-size: 2rem !important;
+  }
+}
+
+.u-fz-22 {
+  font-size: 2.2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-22-sm {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-22-md {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-22-ml {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-22-lg {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-22-xl {
+    font-size: 2.2rem !important;
+  }
+}
+
+.u-fz-24 {
+  font-size: 2.4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-24-sm {
+    font-size: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-24-md {
+    font-size: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-24-ml {
+    font-size: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-24-lg {
+    font-size: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-24-xl {
+    font-size: 2.4rem !important;
+  }
+}
+
+.u-fz-26 {
+  font-size: 2.6rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-26-sm {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-26-md {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-26-ml {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-26-lg {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-26-xl {
+    font-size: 2.6rem !important;
+  }
+}
+
+.u-fz-28 {
+  font-size: 2.8rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-28-sm {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-28-md {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-28-ml {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-28-lg {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-28-xl {
+    font-size: 2.8rem !important;
+  }
+}
+
+.u-fz-30 {
+  font-size: 3rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-30-sm {
+    font-size: 3rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-30-md {
+    font-size: 3rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-30-ml {
+    font-size: 3rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-30-lg {
+    font-size: 3rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-30-xl {
+    font-size: 3rem !important;
+  }
+}
+
+.u-fz-32 {
+  font-size: 3.2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-32-sm {
+    font-size: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-32-md {
+    font-size: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-32-ml {
+    font-size: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-32-lg {
+    font-size: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-32-xl {
+    font-size: 3.2rem !important;
+  }
+}
+
+.u-fz-34 {
+  font-size: 3.4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-34-sm {
+    font-size: 3.4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-34-md {
+    font-size: 3.4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-34-ml {
+    font-size: 3.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-34-lg {
+    font-size: 3.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-34-xl {
+    font-size: 3.4rem !important;
+  }
+}
+
+.u-fz-40 {
+  font-size: 4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-40-sm {
+    font-size: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-40-md {
+    font-size: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-40-ml {
+    font-size: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-40-lg {
+    font-size: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-40-xl {
+    font-size: 4rem !important;
+  }
+}
+
+.u-fz-56 {
+  font-size: 5.6rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-fz-56-sm {
+    font-size: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-fz-56-md {
+    font-size: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-fz-56-ml {
+    font-size: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-fz-56-lg {
+    font-size: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-fz-56-xl {
+    font-size: 5.6rem !important;
+  }
+}
+
+/* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+.u-mt-0 {
+  margin-top: 0 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-0-sm {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-0-md {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-0-ml {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-0-lg {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-0-xl {
+    margin-top: 0 !important;
+  }
+}
+
+.u-mt-8 {
+  margin-top: .8rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-8-sm {
+    margin-top: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-8-md {
+    margin-top: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-8-ml {
+    margin-top: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-8-lg {
+    margin-top: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-8-xl {
+    margin-top: .8rem !important;
+  }
+}
+
+.u-mt-12 {
+  margin-top: 1.2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-12-sm {
+    margin-top: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-12-md {
+    margin-top: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-12-ml {
+    margin-top: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-12-lg {
+    margin-top: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-12-xl {
+    margin-top: 1.2rem !important;
+  }
+}
+
+.u-mt-16 {
+  margin-top: 1.6rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-16-sm {
+    margin-top: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-16-md {
+    margin-top: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-16-ml {
+    margin-top: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-16-lg {
+    margin-top: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-16-xl {
+    margin-top: 1.6rem !important;
+  }
+}
+
+.u-mt-20 {
+  margin-top: 2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-20-sm {
+    margin-top: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-20-md {
+    margin-top: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-20-ml {
+    margin-top: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-20-lg {
+    margin-top: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-20-xl {
+    margin-top: 2rem !important;
+  }
+}
+
+.u-mt-24 {
+  margin-top: 2.4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-24-sm {
+    margin-top: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-24-md {
+    margin-top: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-24-ml {
+    margin-top: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-24-lg {
+    margin-top: 2.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-24-xl {
+    margin-top: 2.4rem !important;
+  }
+}
+
+.u-mt-32 {
+  margin-top: 3.2rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-32-sm {
+    margin-top: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-32-md {
+    margin-top: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-32-ml {
+    margin-top: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-32-lg {
+    margin-top: 3.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-32-xl {
+    margin-top: 3.2rem !important;
+  }
+}
+
+.u-mt-40 {
+  margin-top: 4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-40-sm {
+    margin-top: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-40-md {
+    margin-top: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-40-ml {
+    margin-top: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-40-lg {
+    margin-top: 4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-40-xl {
+    margin-top: 4rem !important;
+  }
+}
+
+.u-mt-48 {
+  margin-top: 4.8rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-48-sm {
+    margin-top: 4.8rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-48-md {
+    margin-top: 4.8rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-48-ml {
+    margin-top: 4.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-48-lg {
+    margin-top: 4.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-48-xl {
+    margin-top: 4.8rem !important;
+  }
+}
+
+.u-mt-56 {
+  margin-top: 5.6rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-56-sm {
+    margin-top: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-56-md {
+    margin-top: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-56-ml {
+    margin-top: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-56-lg {
+    margin-top: 5.6rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-56-xl {
+    margin-top: 5.6rem !important;
+  }
+}
+
+.u-mt-64 {
+  margin-top: 6.4rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mt-64-sm {
+    margin-top: 6.4rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mt-64-md {
+    margin-top: 6.4rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mt-64-ml {
+    margin-top: 6.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mt-64-lg {
+    margin-top: 6.4rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mt-64-xl {
+    margin-top: 6.4rem !important;
+  }
+}
+
+.u-mr-8 {
+  margin-right: .8rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-mr-8-sm {
+    margin-right: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mr-8-md {
+    margin-right: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-mr-8-ml {
+    margin-right: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-mr-8-lg {
+    margin-right: .8rem !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-mr-8-xl {
+    margin-right: .8rem !important;
+  }
+}
+
+.u-m-auto {
+  margin: auto !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-m-auto-sm {
+    margin: auto !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-m-auto-md {
+    margin: auto !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-m-auto-ml {
+    margin: auto !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-m-auto-lg {
+    margin: auto !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-m-auto-xl {
+    margin: auto !important;
+  }
+}
+
+/* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+.u-ls-n10 {
+  letter-spacing: -.01em !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-ls-n10-sm {
+    letter-spacing: -.01em !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-ls-n10-md {
+    letter-spacing: -.01em !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-ls-n10-ml {
+    letter-spacing: -.01em !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-ls-n10-lg {
+    letter-spacing: -.01em !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-ls-n10-xl {
+    letter-spacing: -.01em !important;
+  }
+}
+
+.u-ls-n20 {
+  letter-spacing: -.02em !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-ls-n20-sm {
+    letter-spacing: -.02em !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-ls-n20-md {
+    letter-spacing: -.02em !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-ls-n20-ml {
+    letter-spacing: -.02em !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-ls-n20-lg {
+    letter-spacing: -.02em !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-ls-n20-xl {
+    letter-spacing: -.02em !important;
+  }
+}
+
+.u-ls-40 {
+  letter-spacing: .04em !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-ls-40-sm {
+    letter-spacing: .04em !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-ls-40-md {
+    letter-spacing: .04em !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-ls-40-ml {
+    letter-spacing: .04em !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-ls-40-lg {
+    letter-spacing: .04em !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-ls-40-xl {
+    letter-spacing: .04em !important;
+  }
+}
+
+.u-ls-80 {
+  letter-spacing: .08em !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-ls-80-sm {
+    letter-spacing: .08em !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-ls-80-md {
+    letter-spacing: .08em !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-ls-80-ml {
+    letter-spacing: .08em !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-ls-80-lg {
+    letter-spacing: .08em !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-ls-80-xl {
+    letter-spacing: .08em !important;
+  }
+}
+
+.u-ls-140 {
+  letter-spacing: .14em !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-ls-140-sm {
+    letter-spacing: .14em !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-ls-140-md {
+    letter-spacing: .14em !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-ls-140-ml {
+    letter-spacing: .14em !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-ls-140-lg {
+    letter-spacing: .14em !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-ls-140-xl {
+    letter-spacing: .14em !important;
+  }
+}
+
+.u-ls-180 {
+  letter-spacing: .18em !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-ls-180-sm {
+    letter-spacing: .18em !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-ls-180-md {
+    letter-spacing: .18em !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-ls-180-ml {
+    letter-spacing: .18em !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-ls-180-lg {
+    letter-spacing: .18em !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-ls-180-xl {
+    letter-spacing: .18em !important;
+  }
+}
+
+/* #Font Size
+   -------------------------------------------------------------------------- */
+/*doc
+---
+title: font-size
+name: font-size
+categories: [utility]
+---
+
+フォントサイズを切り替えます。
+末尾にlg,md,smを入れることでレスポンシブに切替可能です。
+
+*/
+.u-lh-1 {
+  line-height: 1 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-lh-1-sm {
+    line-height: 1 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-lh-1-md {
+    line-height: 1 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-lh-1-ml {
+    line-height: 1 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-lh-1-lg {
+    line-height: 1 !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-lh-1-xl {
+    line-height: 1 !important;
+  }
+}
+
+.u-lh-11 {
+  line-height: 1.1 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-lh-11-sm {
+    line-height: 1.1 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-lh-11-md {
+    line-height: 1.1 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-lh-11-ml {
+    line-height: 1.1 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-lh-11-lg {
+    line-height: 1.1 !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-lh-11-xl {
+    line-height: 1.1 !important;
+  }
+}
+
+.u-lh-15 {
+  line-height: 1.5 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-lh-15-sm {
+    line-height: 1.5 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-lh-15-md {
+    line-height: 1.5 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-lh-15-ml {
+    line-height: 1.5 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-lh-15-lg {
+    line-height: 1.5 !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-lh-15-xl {
+    line-height: 1.5 !important;
+  }
+}
+
+.u-lh-2 {
+  line-height: 2 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-lh-2-sm {
+    line-height: 2 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-lh-2-md {
+    line-height: 2 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-lh-2-ml {
+    line-height: 2 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-lh-2-lg {
+    line-height: 2 !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-lh-2-xl {
+    line-height: 2 !important;
+  }
+}
+
+.u-lh-22 {
+  line-height: 2.2 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .u-lh-22-sm {
+    line-height: 2.2 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-lh-22-md {
+    line-height: 2.2 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .u-lh-22-ml {
+    line-height: 2.2 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .u-lh-22-lg {
+    line-height: 2.2 !important;
+  }
+}
+
+@media screen and (min-width: 1544px) {
+  .u-lh-22-xl {
+    line-height: 2.2 !important;
+  }
+}
+
+.u-bg-wh {
+  background-color: #fff !important;
+}

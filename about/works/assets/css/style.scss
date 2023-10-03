@@ -1,0 +1,26 @@
+
+@import "../../../../assets/css/additional/single";
+@import "_hero";
+@import "_gray";
+@import "_flowBox";
+@import "_memberBox";
+@import "_sliderIndex";
+@import "_sliderArrow";
+
+.wk-contentInner {
+  position: relative;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@include _mq-down('lg'){
+  .wk-contentInner {
+    width: 90%;
+  }
+}
+@include _mq-down('md'){
+  .wk-contentInner {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
