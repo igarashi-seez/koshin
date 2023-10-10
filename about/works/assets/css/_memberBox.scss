@@ -35,39 +35,80 @@ list-style: none;
 
     p {
       text-align: center;
-      a {
-        display: block;
-        position: relative;
-        
-        @include _on-event {
-          img {
-            opacity: .7;
-          }
-          span {
-            display: block;
-          }
-        }
-        
-        span {
-          position: absolute;
-          top: -65px;
-          left: 0;
-          display: none;
-          color: #fff;
-          font-size: 2.1rem;
-          font-weight: bold;
-          line-height: 1.5;
-        }
 
-        img {
-          max-width: 12.5rem;
-          max-height: 30rem;
-        }
-      }
+      // a {
+      //   display: block;
+      //   position: relative;
+
+      //   @include _on-event {
+      //     img {
+      //       opacity: .7;
+      //     }
+      //     span {
+      //       display: block;
+      //     }
+      //   }
+
+      //   span {
+      //     position: absolute;
+      //     top: -65px;
+      //     left: 0;
+      //     display: none;
+      //     color: #fff;
+      //     font-size: 2.1rem;
+      //     font-weight: bold;
+      //     line-height: 1.5;
+      //   }
+
+      //   img {
+      //     max-width: 12.5rem;
+      //     max-height: 30rem;
+      //   }
+      // }
 
     }
   }
 }
+// 20211126追記：ここから
+.wk-memberBox__item--link {
+  display: block;
+  position: relative;
+  &:hover, &:active, &:focus {
+    img {
+      opacity: .7;
+    }
+    span {
+      display: block;
+    }
+  }
+  span {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    display: none;
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  img {
+    max-width: 12.5rem;
+    max-height: 30rem;
+  }
+  &-off {
+    &:hover, &:active, &:focus {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+.p-member__list--202111 {
+  .p-member__item {
+    width: 23%;
+  }
+}
+// 20211126追記：ここまで
 
 //  1200px以下
 @include _mq-down('lg'){
@@ -75,23 +116,46 @@ list-style: none;
     top: 6.25vw;
     left: -9vw;
   }
-  .wk-memberBox__list {
-    li {
-      p {
-        a {
-          span {
-            font-size: 1.75vw;
-          }
+  // .wk-memberBox__list {
+  //   li {
+  //     p {
+  //       a {
+  //         span {
+  //           font-size: 1.75vw;
+  //         }
 
-          img {
-            max-width: 10.42vw;
-            max-height: 25vw;
-          }
-        }
-      }
+  //         img {
+  //           max-width: 10.42vw;
+  //           max-height: 25vw;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // 20211126追記：ここから
+  .wk-memberBox__item--link {
+    span {
+      font-size: 1.75vw;
+    }
+    img {
+      max-width: 10.42vw;
+      max-height: 25vw;
+    }
+  }
+  // 20211126追記：ここまで
+}
+
+// 20211126追記：ここから
+@include _mq-down('md'){
+  .p-member__list--202111 {
+    justify-content: flex-start;
+    .p-member__item {
+      width: 44%;
     }
   }
 }
+// 20211126追記：ここまで
 
 // 768ox以下
 .wk-memberBox--sp {
@@ -125,7 +189,7 @@ list-style: none;
 //     a {
 //       display: block;
 //       position: relative;
-      
+
 //       @include _on-event {
 //         img {
 //           opacity: .7;
@@ -134,7 +198,7 @@ list-style: none;
 //           display: block;
 //         }
 //       }
-      
+
 //       span {
 //         position: absolute;
 //         top: -65px;
