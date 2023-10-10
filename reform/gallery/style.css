@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+.dl-type01 dl dt {
+	padding-left: 1em;
+	margin-bottom: 0px;
+	font-size: 1.6rem;
+	position: relative;
+}
+.dl-type01 dl dt::before {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	background: #000;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top:0.5em;
+}
+.dl-type01 dl dd {
+	margin-bottom: 0.75em;
+}
+
+
+.nonliststyle{
+	margin: 0;
+	padding: 0;
+}
+.nonliststyle li{
+	list-style-type: none;
+}
+
+.ol-type01{
+	margin: 0;
+	padding: 0;
+}
+.ol-type01 li{
+	list-style-type: none;
+	list-style-position: inside;
+	counter-increment: cnt;
+	position: relative;
+	padding-left: 1.5em;
+}
+.ol-type01 li::before{
+	display: marker;
+	content:""counter(cnt)".";
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.ul-type01 li {
+	position: relative;
+	padding-left: 1em;
+	margin-bottom: 0.5em;
+}
+.ul-type01 li::before {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: #666;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top:0.575em;
+}
+
+.galleryList .inner{
+	display: block;
+	padding: 0 10px;
+	margin: 15px;
+}
+@media (max-width: 767.98px){
+.galleryList .inner{
+	padding: 0;
+	margin: 15px 0;
+}
+}
+.galleryList .title{
+	font-size: 1.8rem;
+	text-align: center;
+	font-weight: bold;	
+}
+.galleryList .text{
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	min-height: 3.5em;	
+}
+
+.award{
+	font-size: 1.8rem;
+	color: #bf0000;
+}

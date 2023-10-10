@@ -1,0 +1,84 @@
+/* 20211227追記:ここから リフォームトップ 実例紹介 ボタンに矢印追加 */
+.btn-arrow {
+  position: relative;
+}
+.i-btn-arrow {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 3px);
+  right: 10px;
+  z-index: 1;
+}
+.i-btn-arrow::after {
+  content: '';
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: skew(45deg);
+  width: 10px;
+  height: 5px;
+}
+/* 20211227追記:ここまで */
+
+/* 20220226追記:ここから ヘッダーメニュー文字サイズ調整*/
+/* @media (max-width: 1199.98px){
+  header.globalnav .container{
+    font-size: 1.4rem;
+  }
+} */
+/* 20220226追記:ここまで */
+
+/* 20220324追記:ここから　アイコン調整 */
+.button .btn .icon-pin-white {
+  margin-right: 3px;
+}
+/* 20220324追記:ここまで */
+
+/* 20220328追記：ここから　スライダー内お問い合わせ非表示 */
+.section-mv .contact-type01 {
+  display: none;
+}
+/* 20220328追記：ここまで */
+
+/* 20221027追記：ここから 新着情報カテゴリ追加 */
+@media screen and (max-width: 480px){
+  .navs-type01 .nav-tabs .nav-item .nav-link{
+    font-size: 1.2rem;
+  }
+}
+/* 20221027追記：ここまで */
+
+
+/* 20221227追記：ここから スタッフ紹介一時削除 */
+.reform-top-section04__list{
+  justify-content: center;
+  gap: 24px;
+}
+/* 20221227追記：ここまで */
+
+/* 20230120追記:ここから トップ グローバルナビゲーション リンク先ボタン追加 */
+header.globalnav nav .globalnav-body .globalnav-btn-newbuilding{
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  padding: 7px 10px;
+  background: #bf0000;
+  color: #fff;
+  transition: 0.15s ease-in-out;
+  margin: 0;
+  text-align: center;
+  min-width: 170px;
+  margin-top: 15px;
+}
+
+header.globalnav nav .globalnav-body .globalnav-btn-newbuilding:hover{
+  background: #333;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header.globalnav nav .globalnav-body .globalnav-btn-newbuilding{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    min-width: 140px;
+  }
+}
+/* 20230120追記:ここまで */

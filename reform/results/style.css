@@ -1,0 +1,80 @@
+
+html body>.layout-type01 .section-mv .inner .h1 {
+    font-size: 3.2rem;
+    line-height: 1.5;
+}
+@media (max-width: 767.98px){
+	html body>.layout-type01 .section-mv .inner .h1 {
+			font-size: 2.4rem;
+	}
+	.reform-results .slick-dots li {
+		width: 3.75vw;
+		/* height: 3.75vw; */
+	}
+}
+
+body>.reform .section-mv--reform07 {
+	background: url("/assets/images/reform/results/section-mv07.jpg") center 41%/cover no-repeat;
+}
+
+body>.reform .section-mv--reform06 {
+	background: url("/assets/images/reform/results/section-mv06.jpg") center 41%/cover no-repeat;
+}
+
+body>.reform .section-mv--reform05 {
+	background: url("/assets/images/reform/results/section-mv05.jpg") center 41%/cover no-repeat;
+}
+
+
+.slider--reform-results-over22.slick-dotted.slick-slider {
+	margin-bottom: 70px;
+}
+.slider--reform-results-over22 .slick-dots {
+	margin: auto;
+	max-width: 670px;
+	right: 0;
+	bottom: -64px;
+	left: 0;
+}
+
+
+/* .nonliststyle{
+	margin: 0;
+	padding: 0;
+}
+.nonliststyle li{
+	list-style-type: none;
+}
+
+
+.galleryList li{
+	margin-bottom: 40px;
+}
+.galleryList li span{
+	display: block;
+	position: relative;
+	width: 100%;
+}
+.galleryList li span:hover{
+	cursor: pointer;
+}
+.galleryList li span::before{
+	content: "";
+	display: block;
+	padding-top: 61.8%;
+}
+.galleryList li span img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.ofi {
+  object-fit: cover; /* 他のブラウザ用(＝通常の指定) */
+  /* object-position: 50% 50%; 他のブラウザ用(＝通常の指定) */
+  /* font-family: 'object-fit: cover; object-position: 50% 50%;' IE・Edge対応
+}  */

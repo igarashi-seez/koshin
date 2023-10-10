@@ -1,0 +1,733 @@
+@charset "UTF-8";
+.headLine01 {
+  display: inline-block;
+  position: relative;
+  padding-top: 75px;
+  font-size: 40px;
+  font-size: 4rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+  color: #2B241F;
+}
+@media only screen and (max-width: 768px) {
+  .headLine01 {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .headLine01 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+}
+.headLine01::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(/assets/images/reform/decarbonization/headLine-icon01.svg);
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 68px;
+}
+
+.headLine02 {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+  font-size: 3rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+  color: #2B241F;
+}
+.headLine02::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #6BD7DF;
+  width: 100%;
+  height: 14px;
+  z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+  .headLine02 {
+    font-size: 26px;
+    font-size: 2.6rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .headLine02 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+}
+
+.reformrecommend-point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 66px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #2B241F;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+.reformrecommend-point span {
+  line-height: 1.3;
+  padding: 1px 0;
+  margin-left: 3px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.bgcGreen {
+  background-color: #E7F8E4;
+}
+
+.bgcYellow {
+  background-color: #F9F9E7;
+}
+
+.content__wrap {
+  padding: 65px 30px 100px;
+}
+@media only screen and (max-width: 1440px) {
+  .content__wrap {
+    padding: 48px 30px 75px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .content__wrap {
+    padding: 35px 30px 55px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content__wrap {
+    padding: 26x 30px 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .content__wrap {
+    padding: 26px 15px 25px;
+  }
+}
+
+.content__inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact__wrap {
+  position: relative;
+  z-index: 1;
+}
+.contact__wrap::before {
+  content: "";
+  position: absolute;
+  right: 18.3854166667vw;
+  bottom: 3.125vw;
+  min-width: 297px;
+  width: 24.375vw;
+  height: 173px;
+  z-index: -1;
+  background-size: contain;
+  background-image: url("/assets/images/reform/decarbonization/bgi/airplane.svg");
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1366px) {
+  .contact__wrap::before {
+    right: 30px;
+    bottom: -40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact__wrap::before {
+    bottom: -90px;
+    min-width: 207px;
+  }
+}
+
+.city__wrap {
+  position: relative;
+  z-index: 1;
+}
+.city__wrap::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 247px;
+  z-index: -1;
+  background-image: url("/assets/images/reform/decarbonization/bgi/city.svg");
+  background-repeat: no-repeat;
+}
+
+.decarbonizingText {
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.decarbonizingText--b {
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+}
+
+.reformMerit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reformMerit--item {
+  width: calc((100% - 36px) / 3);
+  margin-right: 18px;
+}
+.reformMerit--item:nth-child(3n) {
+  margin-right: 0;
+}
+@media only screen and (max-width: 768px) {
+  .reformMerit--item {
+    width: calc((100% - 18px) / 2);
+  }
+  .reformMerit--item:nth-child(3n) {
+    margin-right: 18px;
+  }
+  .reformMerit--item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .reformMerit--item {
+    width: 100%;
+    margin-right: 0;
+  }
+  .reformMerit--item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.reformQuestion--item {
+  display: flex;
+  align-items: center;
+  background-color: #E7F8E4;
+  padding: 30px;
+  border: 4px solid #7FCCA8;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .reformQuestion--item {
+    padding: 30px 15px;
+  }
+}
+.reformQuestion--item--left {
+  flex: 1;
+  margin: 0 30px 0 34px;
+}
+@media only screen and (max-width: 768px) {
+  .reformQuestion--item--left {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+.reformQuestion--item .decarbonizingText {
+  text-align: left;
+}
+.reformQuestion--item .decarbonizingText--b {
+  text-align: left;
+}
+.reformQuestion--item .headLine02 {
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .reformQuestion--item .headLine02 {
+    width: 100%;
+  }
+}
+.reformQuestion--item--right {
+  text-align: center;
+  width: 41.8727915194%;
+}
+@media only screen and (max-width: 768px) {
+  .reformQuestion--item--right {
+    width: 100%;
+  }
+}
+.reformQuestion--item--right img {
+  max-width: 474px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+.reformQuestion--item--right .decarbonizingText {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5714285714;
+}
+.reformQuestion--item--right .decarbonizingText span {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+}
+.reformQuestion--item:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  .reformQuestion--item {
+    flex-direction: column;
+  }
+}
+
+.reformrecommend--item__wrap {
+  background-color: #fff;
+  padding: 50px 38px 40px;
+  margin-bottom: 20px;
+  border: 4px solid #7FCCA8;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .reformrecommend--item__wrap {
+    padding: 50px 15px 40px;
+  }
+}
+.reformrecommend--item__wrap .reformrecommend--item--row {
+  border: none;
+  padding: 0;
+}
+
+.reformrecommend--item--col__wrap {
+  display: flex;
+}
+@media only screen and (max-width: 1366px) {
+  .reformrecommend--item--col__wrap {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .reformrecommend--item--col__wrap {
+    flex-direction: column;
+  }
+}
+
+.reformrecommend .decarbonizingText {
+  text-align: left;
+}
+.reformrecommend .headLine02 {
+  margin-bottom: 33px;
+}
+.reformrecommend--item {
+  background-color: #fff;
+  padding: 50px 38px 40px;
+  border: 4px solid #7FCCA8;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .reformrecommend--item {
+    padding: 50px 15px 40px;
+  }
+}
+.reformrecommend--item--row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .reformrecommend--item--row {
+    flex-direction: column;
+  }
+}
+.reformrecommend--icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 405px;
+  margin: 0 auto 10px;
+}
+.reformrecommend--icon img {
+  max-width: 80px;
+  margin: 0 10px 20px 10px;
+}
+.reformrecommend--item--left {
+  flex: 1;
+  margin-right: 26px;
+}
+.reformrecommend--item--left > img {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .reformrecommend--item--left {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+.reformrecommend--item--right {
+  width: 47.8494623656%;
+}
+@media only screen and (max-width: 768px) {
+  .reformrecommend--item--right {
+    width: 100%;
+  }
+}
+.reformrecommend--item--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33%;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 1366px) {
+  .reformrecommend--item--col {
+    width: calc((100% - 20px) / 2);
+    margin-bottom: 20px;
+  }
+  .reformrecommend--item--col:last-child {
+    margin-bottom: 0;
+  }
+  .reformrecommend--item--col:nth-child(2) {
+    margin-right: 0;
+  }
+}
+.reformrecommend--item--col:last-child {
+  margin-right: 0;
+}
+.reformrecommend--item--col .reformrecommend--item--left {
+  width: 100%;
+  margin: 0;
+}
+.reformrecommend--item--col .reformrecommend--item--left .decarbonizingText {
+  margin-bottom: 20px;
+}
+.reformrecommend--item--col .reformrecommend--item--right {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .reformrecommend--item--col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.decarbonization img {
+  width: 100%;
+}
+
+.decarbonizing-mainVisual {
+  position: relative;
+  background-image: url(/assets/images/reform/decarbonization/mainVisual.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 58%;
+  width: 100vw;
+  height: 600px;
+}
+@media only screen and (max-width: 480px) {
+  .decarbonizing-mainVisual {
+    background-position: 58%;
+    width: 100vw;
+    height: 580px;
+  }
+}
+.decarbonizing-mainVisual--text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 14%;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+}
+.decarbonizing-mainVisual--text h1 {
+  font-size: 60px;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 768px) {
+  .decarbonizing-mainVisual--text h1 {
+    font-size: 48px;
+    font-size: 4.8rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .decarbonizing-mainVisual--text h1 {
+    font-size: 38px;
+    font-size: 3.8rem;
+  }
+}
+.decarbonizing-mainVisual--text p {
+  font-size: 20px;
+  font-size: 2rem;
+}
+.decarbonizing-mainVisual .decarbonizing-mainVisual--text__innner {
+  position: relative;
+  padding-top: 100px;
+}
+.decarbonizing-mainVisual .decarbonizing-mainVisual--text__innner::before {
+  content: "";
+  position: absolute;
+  background-image: url(/assets/images/reform/decarbonization/mainVisual-icon.svg);
+  width: 98px;
+  height: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.content__inner .headLine01 {
+  display: block;
+  text-align: center;
+  margin-bottom: 51px;
+}
+@media only screen and (max-width: 768px) {
+  .content__inner .headLine01 {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+.content__inner .headLine01 + .decarbonizingText {
+  margin-bottom: 46px;
+}
+@media only screen and (max-width: 950px) {
+  .content__inner .headLine01 + .decarbonizingText {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content__inner .headLine01 + .decarbonizingText {
+    margin-bottom: 20px;
+  }
+}
+
+.reformMerit--item {
+  background-color: #fff;
+  text-align: center;
+  padding: 26px;
+  margin-bottom: 18px;
+  border: 4px solid #7FCCA8;
+  border-radius: 10px;
+}
+.reformMerit--item:nth-child(n+4) {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  .reformMerit--item:nth-child(4) {
+    margin-bottom: 18px;
+  }
+  .reformMerit--item:nth-child(n+5) {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .reformMerit--item:nth-child(5) {
+    margin-bottom: 18px;
+  }
+  .reformMerit--item:last-child {
+    margin-bottom: 0;
+  }
+}
+.reformMerit--item .decarbonizingText {
+  text-align: left;
+}
+.reformMerit--item .headLine01 {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+  font-size: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .reformMerit--item .headLine01 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+}
+.reformMerit--item .headLine01--icon02,
+.reformMerit--item .headLine01--icon03,
+.reformMerit--item .headLine01--icon04 {
+  background-repeat: no-repeat;
+}
+.reformMerit--item .headLine01--icon02::before {
+  width: 31px;
+  height: 30px;
+  background-image: url(/assets/images/reform/decarbonization/headLine-icon02.svg);
+}
+.reformMerit--item .headLine01--icon03::before {
+  width: 28px;
+  height: 28px;
+  background-image: url(/assets/images/reform/decarbonization/headLine-icon03.svg);
+}
+.reformMerit--item .headLine01--icon04::before {
+  width: 32px;
+  height: 31px;
+  background-image: url(/assets/images/reform/decarbonization/headLine-icon04.svg);
+}
+.reformMerit--item img {
+  margin-bottom: 30px;
+}
+.reformMerit--item .headLine01 {
+  margin-bottom: 17px;
+}
+
+.meritImage01 {
+  max-width: 304px;
+}
+
+.meritImage02 {
+  max-width: 219px;
+}
+
+.meritImage03 {
+  max-width: 211px;
+}
+
+.meritImage04 {
+  max-width: 203px;
+}
+
+.meritImage05 {
+  max-width: 203px;
+}
+
+.meritImage06 {
+  max-width: 172px;
+}
+
+.conatact-section {
+  text-align: center;
+}
+.conatact-section h2::before {
+  content: none;
+}
+.conatact-section a {
+  max-width: 570px;
+}
+.conatact-section .headLine01 + .decarbonizingText {
+  text-align: center;
+}
+
+.reformrecommendTitle__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__wrap {
+  padding-top: 80px;
+  padding-bottom: 73px;
+}
+@media only screen and (max-width: 1440px) {
+  .contact__wrap {
+    padding-top: 60px;
+    padding-bottom: 54px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact__wrap {
+    padding-top: 44px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact__wrap {
+    padding-top: 32px;
+    padding-bottom: 29px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .contact__wrap {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+}
+.contact__wrap .headLine01 {
+  padding-top: 0;
+  margin-bottom: 16px;
+}
+.contact__wrap .headLine01 + .decarbonizingText {
+  margin-bottom: 16px;
+}
+.contact__wrap .btn {
+  margin-bottom: 30px;
+}
+.contact__wrap .btn + p {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 700;
+}
+
+.modal {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (max-width: 480px) {
+  .modal {
+    pointer-events: none;
+  }
+}
+
+.remodal {
+  position: relative;
+  background: initial;
+  max-width: 1068px;
+  padding: 0;
+}
+.remodal img {
+  width: 100%;
+}
+
+.remodal-cancel {
+  position: absolute;
+  background-color: #ba4e4e;
+  right: 0;
+  min-width: 60px;
+}
+
+@media only screen and (max-width: 950px) {
+  .br-none950 {
+    display: none;
+  }
+}
+
+.br768 {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .br768 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .br-none768 {
+    display: none;
+  }
+}
+
+.br480 {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .br480 {
+    display: block;
+  }
+}

@@ -1,0 +1,98 @@
+#menu_box {
+	border-collapse:collapse;
+	border-spacing:0px;
+	background-image: url("images/plannerbg.jpg");
+ }
+#menu_box td {
+	padding:8px;
+ }
+#menu_box td img.planner{
+	border:2px solid #fff;
+ }
+
+#planner_list {
+/*	float: left;*/
+	width: 685px;
+ }
+#planner_list td {
+/*	float: left;*/
+	width: 160px;
+ }
+
+ul.list_line {
+	width: auto;
+	padding: 0px;
+	margin-left: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	vertical-align: top;
+}
+
+ul.list_line li{
+	padding: 0px 0px 4px 20px;
+	background-image:url("/reform/common/images/i_arrow01.gif");
+	background-position: 0px 4px;
+	background-repeat: no-repeat;
+	vertical-align: top;
+	list-style-type: none;
+}
+ul.list_line li a:link,
+ul.list_line li a:visited,
+ul.list_line li a:active{
+	text-decoration: none;
+	color: #663;
+}
+ul.list_line li a:hover {
+	text-decoration: underline;
+	color: #f66;
+}
+
+td#planner_msg {
+/*	float: right;*/
+	width: 535px;
+	margin: 0px;
+	padding-top;10px;
+	padding-left: 24px;
+	padding-right: 20px;
+	border-left:4px solid #ccc;
+	vertical-align: top;
+ }
+
+#planner_box {
+	border-collapse:collapse;
+	border-spacing:0px;
+	background-color: #553322;
+	width:100%;
+ }
+#planner_box td {
+	vertical-align: top;
+ }
+#planner_box td.photo {
+	padding:8px 20px 8px 8px;
+ }
+#planner_box td.msg {
+	padding:24px 20px 8px 0px;
+	color:#fff;
+ }
+
+
+#planner_menu {
+	border-collapse:collapse;
+	border-spacing:0px;
+	background-color: #fff;
+	text-align:center;
+ }
+#planner_menu td {
+	padding:4px;
+ }
+#planner_menu td a:link,
+#planner_menu td a:visited,
+#planner_menu td a:active{
+	text-decoration: none;
+	color: #663;
+}
+#planner_menu td a:hover {
+	text-decoration: underline;
+	color: #f66;
+}
+
