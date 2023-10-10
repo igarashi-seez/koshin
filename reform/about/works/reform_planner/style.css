@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+.section-head .h2-type04{
+  background-image: url(./image/bg_01.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.h2-type04 h1 {
+    color: #333;
+    font-size: 4rem;
+    font-weight: bold;
+}
+@media (max-width: 767.98px){
+.h2-type04 h1 {
+    font-size: 2.4rem;
+}
+}
+
+
+html body>.layout-type01 .section-mv .inner .h1 {
+    font-size: 3.2rem;
+    line-height: 1.5;
+}
+@media (max-width: 767.98px){
+html body>.layout-type01 .section-mv .inner .h1 {
+    font-size: 2.4rem;
+}
+}
+
+
+
+/*------ add ---------*/
+.bg {
+  position: relative;
+  padding: 0 10px;
+}
+.bg::before {
+  display: block;
+  padding-top: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: '';
+}
+.bg-01::before {
+  background-image: url(./image/img02.jpg);
+}
+.bg-02::before {
+  background-image: url(./image/img03.jpg);
+}
+.bg-03::before {
+  background-image: url(./image/img04.jpg);
+}
+.bg div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.unit-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -50px -50px 0;
+  padding: 0;
+  list-style: none;
+}
+.unit-list--center {
+  justify-content: center;
+}
+.unit {
+  width: 300px;
+  margin: 0 50px 50px 0;
+}
+.unit-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.no-image {
+  display: block; 
+  position: relative;
+  height: 340px;
+}
+.no-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.unit-image img {
+  width: 100%;
+}
+.unit-body {
+  font-size: 22px;
+  text-align: center;
+}
+.unit-name {
+  margin-top: 6px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.block-type10 .item-staff {
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .unit-list {
+    display: block;
+    margin: 0 0 -20px;
+    padding: 0;
+  }
+  .unit {
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .unit-image {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .no-image {
+    height: 107.5vw;
+  }
+  .unit-body {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .unit-name {
+    margin-top: 6px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .unit-body .btn {
+    width: 100%;
+  }
+  .block-type10 .item-staff {
+    margin-bottom: 60px;
+  }
+}

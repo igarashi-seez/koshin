@@ -1,0 +1,69 @@
+.about figure img {
+	width: 100%;
+}
+.section-head .h2-type04{
+   height: 400px;
+	 background: left center url("./image/bg01.jpg") no-repeat;
+	 background-size: cover;
+   position: relative;
+}
+.h2-type04 h2 {
+  color: #000;
+}
+.h2-type03 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+.h2-type03::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 1px;
+  background-color: #bf0000;
+  content: '';
+}
+@media (max-width: 767px) {
+  .section-head .h2-type04{
+    height: 200px;
+  }
+  .h2-type03 {
+    font-size: 1.6rem;
+  }
+}
+.bg {
+  position: relative;
+}
+.bg::before {
+  display: block;
+  padding-top: 75%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: '';
+}
+.bg > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bg-01::before {
+  background-image: url(./image/img_01_01.png);
+}
+.bg-02::before {
+  background-image: url(./image/img_01_02.png);
+}
+.bg-03::before {
+  background-image: url(./image/img_01_03.png);
+}
+.bg-04::before {
+  background-image: url(./image/img_02_01.png);
+}
+.bg-05::before {
+  background-image: url(./image/img_02_02.png);
+}

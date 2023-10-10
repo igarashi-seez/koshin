@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.section02 .section-inner:nth-of-type(2n) .container .row{
+	flex-direction: row-reverse;
+}
+/*
+.staff main .section02 .section-inner:nth-child(2n){
+	background-color: #fafafa;
+}
+*/
+.section02 .section-inner:nth-of-type(2n) .container .block-type12 .image img {
+	left: auto;
+	right: 50px;
+}
+@media (max-width: 767px){
+.block-type12 {
+	min-height:auto;
+}	
+}
+
+
+.staff .block-type10{
+	margin-bottom: 70px;
+}
+@media (max-width: 767.98px){
+.staff .block-type10{
+	margin-bottom: 30px;
+}
+}
+
+.staff .section-head .h2-type04 {
+	height: auto;
+}
+.staff .section-head .h2-type04 h1 {
+	font-size: 4rem;
+	font-weight: bold;
+	color: #222;
+}
+
+.staff main .section01 .item .image .link{
+	display: block;
+	position: relative;
+}
+.staff main .section01 .item .image .link .interview{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #bf0000;
+	color: #ffffff;
+	font-size: 1.1rem;
+	line-height: 1;
+	padding: 4px 5px;
+}
+.staff main .section01 .item .image .link .interview::before{
+	content: "";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: rotate(-45deg) translateY(-2px);
+	margin-right: 2px;
+}
+_:-ms-lang(x)::-ms-backdrop, .staff main .section01 .item .image .link .interview{
+	padding: 6px 5px 2px;
+}
+
+
+
+.block-type10 .item .text .name .small {
+	display: block;
+}
