@@ -52,7 +52,7 @@
 
 
   <div class="wk-hero">
-    <div class="wk-hero__img container"><img src="assets/images/main.jpg" alt="社員の集合写真（右から、渡邊 慶司、山本 恭兵、新津 美里、小金沢 豊、松枝 克弥、坂井 飛鳥）"></div>
+    <div class="wk-hero__img container"><img src="assets/images/main.jpg" alt=""></div>
     <div class="wk-hero__inner u-text-wh">
       <div class="container container-sm">
         <div class="wk-hero__content">
@@ -145,6 +145,7 @@
 			<li class="wk-flowBox wk-flowBox--01 u-text-wh">
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num"><span class="u-text-uppercase">Step</span>01</div>
 						<h3 class="u-text-bold">出会い</h3>
@@ -321,7 +322,7 @@
 						<area target="" alt="" title="" href="/about/staff/sakai.php" coords="453,314,517,477" shape="rect">
 					</map> -->
 				</div><!-- //.wk-memberBox--sp -->
-			</li><!-- //.wk-flowBox -->
+			</li>//.wk-flowBox
 		</ul><!-- //.wk-flowBox__wrapper -->
 	</div>
 

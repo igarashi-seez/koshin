@@ -1,0 +1,44 @@
+
+.wk-hero__inner {
+  margin-top: -10.5%;
+  padding: 17% 0 16%;
+  background-image: url(/reform/about/works/assets/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container-sm {
+    padding-right: 105px;
+  }
+}
+
+.wk-hero__content {
+  position: relative;
+}
+
+.wk-hero__copy {
+  font-size: 3.2rem;
+  line-height: 1.1875;
+}
+
+.wk-hero__figure {
+  position: absolute;
+  width: 32%;
+  top: 0;
+  right: 4%;
+}
+
+@include _mq-down('ml'){
+
+  .wk-hero__copy {
+    font-size: 2.4rem;
+  }
+}
+
+@include _mq-down('md'){
+  .wk-hero__inner {
+    margin-top: -19%;
+    padding: 25% 0 13%;
+    background-image: url(/assets/images/about/bg_sp.jpg);
+  }
+}

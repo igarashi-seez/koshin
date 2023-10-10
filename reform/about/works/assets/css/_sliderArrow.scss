@@ -1,0 +1,29 @@
+.wk-sliderArrow {
+  position: absolute;
+  z-index: 1;
+  top: 5.33vw;
+  width: 6vw;
+  height: 6vw;
+  border: none;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  background: none;
+
+  &.slick-disabled {
+    display: none !important;
+  }
+}
+
+.wk-sliderArrow--prev {
+  left: 15px;
+  transform: rotateZ(225deg);
+}
+
+.wk-sliderArrow--next {
+  right: 15px;
+  transform: rotateZ(45deg);
+}
+
+.wk-sliderArrow--black {
+  border-color: #808080;
+}
