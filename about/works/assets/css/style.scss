@@ -12,6 +12,11 @@
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
+
+  &--member {
+    max-width: 145rem;
+    min-width: 1380px;
+  }
 }
 @include _mq-down('lg'){
   .wk-contentInner {

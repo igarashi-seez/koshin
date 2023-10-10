@@ -1,7 +1,7 @@
 .wk-memberBox {
   width: 100%;
   position: absolute;
-  top: 75px;
+  top: 130px;
   left: -120px;
   z-index: 1;
 }
@@ -21,7 +21,7 @@
 }
 
 .wk-memberBox__list {
-width: 62%;
+width: 60%;
 display: flex;
 align-items: baseline;
 float: right;
@@ -30,7 +30,7 @@ box-sizing: border-box;
 list-style: none;
 
   li {
-    width: calc(100% / 6);
+    width: calc(100% / 8);
     float: left;
 
     p {
@@ -93,7 +93,7 @@ list-style: none;
   }
   img {
     max-width: 12.5rem;
-    max-height: 30rem;
+    max-height: 24rem;
   }
   &-off {
     &:hover, &:active, &:focus {
@@ -166,10 +166,10 @@ list-style: none;
 .wk-memberBox--sp--01 {
   padding-left: 1rem;
 }
-.wk-memberBox--sp--07 {
-  padding-left: 27.963vw;
-  padding-right: 1rem;
-}
+// .wk-memberBox--sp--07 {
+//   padding-left: 27.963vw;
+//   padding-right: 1rem;
+// }
 
 // .wk-memberBox--sp__list {
 //   display: flex;
