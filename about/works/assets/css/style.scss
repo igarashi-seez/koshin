@@ -21,6 +21,9 @@
 @include _mq-down('lg'){
   .wk-contentInner {
     width: 90%;
+    &--member {
+      min-width: auto;
+    }
   }
 }
 @include _mq-down('md'){

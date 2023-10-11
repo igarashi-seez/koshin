@@ -29,3 +29,9 @@
     padding: 0 1rem;
   }
 }
+
+//common.jsの打ち消し
+header,.h1, .breadcrumb, .side-nav, footer {
+  font-family: Quicksand,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","游ゴシック体","Yu Gothic",YuGothic,"メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-weight: 500;
+}

@@ -311,18 +311,71 @@
     font-size: 1.4rem;
   }
   .wk-flowBox__label {
-    width: 10vw;
+    width: 7vw;
     padding: 1.25vw 0;
     top: 1.5vw;
-    font-size: 2.67vw;
+    font-size: 1.67vw;
   }
   .wk-flowBox__label span {
     font-size: 1vw;
     margin-top: 0.5vw;
   }
   .wk-flowBox__label--small {
-    width: 10.83vw;
-    font-size: 2.08vw;
+    width: 12vw;
+    font-size: 1.67vw;
+  }
+  .wk-flowBox__dashed--01::before {
+    left: 50.5%;
+  }
+  .wk-flowBox--01 .wk-flowBox__label {
+    left: 46.5%;
+  }
+  .wk-flowBox__dashed--02::before {
+    left: 59.5%;
+  }
+  .wk-flowBox--03 .wk-flowBox__label {
+    left: 55.5%;
+  }
+  .wk-flowBox__dashed--02-02::before {
+    left: 69.5%;
+  }
+  .wk-flowBox--03 .wk-flowBox__label-02 {
+    left: 63.5%;
+  }
+  .wk-flowBox--03 .wk-flowBox__dashed--02::before {
+    height: 80%;
+  }
+  .wk-flowBox--03 .wk-flowBox__dashed--02-02::before {
+    height: 80%;
+  }
+  .wk-flowBox__dashed--03::before {
+    left: 77.5%;
+  }
+  .wk-flowBox--04 .wk-flowBox__label {
+    left: 71%;
+  }
+  .wk-flowBox--04 .wk-flowBox__label span {
+    scale: 0.7;
+    margin-left: -0.6em;
+  }
+  .wk-flowBox__dashed--04::before {
+    left: 85%;
+  }
+  .wk-flowBox--05 .wk-flowBox__label {
+    width: 9vw;
+    left: 80%;
+  }
+  .wk-flowBox__dashed--05::before {
+    left: 94%;
+  }
+  .wk-flowBox--06 .wk-flowBox__label {
+    left: 88.5%;
+  }
+  .wk-flowBox__dashed--06::before {
+    left: 99%;
+  }
+  .wk-flowBox--07 .wk-flowBox__label {
+    left: 93%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -444,13 +497,16 @@
 @media screen and (max-width: 1199px) {
   .wk-memberBox {
     top: 6.25vw;
-    left: -9vw;
+    left: 3vw;
+  }
+  .wk-memberBox__list {
+    width: 70%;
   }
   .wk-memberBox__item--link span {
     font-size: 1.75vw;
   }
   .wk-memberBox__item--link img {
-    max-width: 10.42vw;
+    max-width: 16.42vw;
     max-height: 25vw;
   }
 }
@@ -570,6 +626,9 @@
 @media screen and (max-width: 1199px) {
   .wk-contentInner {
     width: 90%;
+  }
+  .wk-contentInner--member {
+    min-width: auto;
   }
 }
 @media screen and (max-width: 767px) {

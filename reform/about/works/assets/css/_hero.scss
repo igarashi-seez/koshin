@@ -9,6 +9,9 @@
 
   .container-sm {
     padding-right: 105px;
+    @include _mq-down('md'){
+      padding-right: 10px;
+    }
   }
 }
 

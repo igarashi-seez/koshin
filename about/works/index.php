@@ -145,7 +145,6 @@
 			<li class="wk-flowBox wk-flowBox--01 u-text-wh">
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
-					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num"><span class="u-text-uppercase">Step</span>01</div>
 						<h3 class="u-text-bold">出会い</h3>
@@ -322,7 +321,7 @@
 						<area target="" alt="" title="" href="/about/staff/sakai.php" coords="453,314,517,477" shape="rect">
 					</map> -->
 				</div><!-- //.wk-memberBox--sp -->
-			</li>//.wk-flowBox
+			</li>
 		</ul><!-- //.wk-flowBox__wrapper -->
 	</div>
 

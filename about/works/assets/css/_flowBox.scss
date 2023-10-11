@@ -304,10 +304,10 @@
 
   // 営業、設計、施工のボックス
   .wk-flowBox__label {
-    width: 10vw;
+    width: 7vw;
     padding: 1.25vw 0;
     top: 1.5vw;
-    font-size: 2.67vw;
+    font-size: 1.67vw;
 
     span {
       font-size: 1vw;
@@ -315,8 +315,8 @@
     }
   }
   .wk-flowBox__label--small {
-    width: 10.83vw;
-    font-size: 2.08vw;
+    width: 12vw;
+    font-size: 1.67vw;
   }
 
   // // 縦方向の点線と営業、設計、施工の横方向の位置
@@ -335,6 +335,113 @@
   //     left: 78%;
   //   }
   // }
+
+  // 1本目
+  .wk-flowBox__dashed--01 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 50.5%;
+    }
+  }
+
+  .wk-flowBox--01 .wk-flowBox__label {
+    left: 46.5%;
+  }
+
+
+  // 2本目
+  .wk-flowBox__dashed--02 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 59.5%;
+    }
+  }
+
+  .wk-flowBox--03 .wk-flowBox__label {
+    left: 55.5%;
+  }
+
+
+  //2本目その2
+  .wk-flowBox__dashed--02-02 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 69.5%;
+    }
+  }
+
+  .wk-flowBox--03 .wk-flowBox__label-02 {
+      left: 63.5%;
+  }
+
+  .wk-flowBox--03 {
+    .wk-flowBox__dashed--02 {
+      &::before {
+        height: 80%;
+      }
+    }
+    .wk-flowBox__dashed--02-02 {
+      &::before {
+        height: 80%;
+      }
+    }
+  }
+
+  // 3本目
+  .wk-flowBox__dashed--03 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 77.5%;
+    }
+  }
+
+  .wk-flowBox--04 .wk-flowBox__label {
+    left: 71%;
+    span {
+      scale: 0.7;
+      margin-left: -0.6em;
+    }
+  }
+
+  // 4本目
+  .wk-flowBox__dashed--04 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 85%;
+    }
+  }
+
+  .wk-flowBox--05 .wk-flowBox__label {
+    width: 9vw;
+    left: 80%;
+  }
+
+  // 5本目
+  .wk-flowBox__dashed--05 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 94%;
+    }
+  }
+
+  .wk-flowBox--06 .wk-flowBox__label {
+    left: 88.5%;
+  }
+
+  // 6本目
+  .wk-flowBox__dashed--06 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 99%;
+    }
+  }
+
+  .wk-flowBox--07 .wk-flowBox__label {
+    left: 93%;
+  }
+
+
+
 
 }
 

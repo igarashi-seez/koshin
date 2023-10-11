@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .wk-hero__inner {
   margin-top: -10.5%;
   padding: 17% 0 16%;
@@ -8,6 +9,11 @@
 }
 .wk-hero__inner .container-sm {
   padding-right: 105px;
+}
+@media screen and (max-width: 767px) {
+  .wk-hero__inner .container-sm {
+    padding-right: 10px;
+  }
 }
 
 .wk-hero__content {
@@ -265,7 +271,7 @@
     font-size: 2.67vw;
   }
   .wk-flowBox__cotent {
-    min-height: 31.25vw;
+    min-height: 51.25vw;
     padding: 7.08vw 0;
   }
   .wk-flowBox__cotent h3 {
@@ -554,4 +560,8 @@
     width: 100%;
     padding: 0 1rem;
   }
+}
+header, .h1, .breadcrumb, .side-nav, footer {
+  font-family: Quicksand, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
