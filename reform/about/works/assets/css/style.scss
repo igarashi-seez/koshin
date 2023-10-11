@@ -18,12 +18,27 @@
     min-width: 1270px;
   }
 }
+@include _mq-down('xl'){
+  .wk-contentInner--member {
+    max-width: 120rem;
+    min-width: auto;
+  }
+  .wk-memberBox {
+    left: 0;
+  }
+  .wk-memberBox__list {
+    width: 72%;
+  }
+}
 @include _mq-down('lg'){
   .wk-contentInner {
     width: 90%;
     &--member {
       min-width: auto;
     }
+  }
+  .wk-memberBox__list {
+    width: 66%;
   }
 }
 @include _mq-down('md'){

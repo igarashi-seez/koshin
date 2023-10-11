@@ -354,16 +354,16 @@
   .wk-flowBox__dashed--04 {
     &::before {
       @extend %flowBox__dashed;
-      left: 90.5%;
+      left: 87.5%;
     }
   }
 
   .wk-flowBox--05 .wk-flowBox__label {
-    left: 85.2%;
+    left: 82.2%;
     width: 10.5rem;
     span {
       scale: 0.7;
-      margin-left: -0.9em;
+      margin-left: -1.3em;
     }
   }
 
@@ -372,7 +372,7 @@
   .wk-flowBox__dashed--05 {
     &::before {
       @extend %flowBox__dashed;
-      left: 100%;
+      left: 98%;
     }
   }
 

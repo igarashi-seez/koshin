@@ -260,4 +260,5 @@ $(window).on('load',function () {
 			$('.wk-memberBox').removeClass('fixedEnd');
 		}
 	});
+
 });

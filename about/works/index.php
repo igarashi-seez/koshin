@@ -71,7 +71,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/matsueda.php">
-                <img src="assets/images/person_01a.png" alt="松枝 克弥">
+                <img src="assets/images/person_01a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -79,7 +79,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/niitsu.php">
-                <img src="assets/images/person_02a.png" alt="新津 美里">
+                <img src="assets/images/person_02a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -87,7 +87,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/yamamoto.php">
-                <img src="assets/images/person_03a.png" alt="山本 恭兵">
+                <img src="assets/images/person_03a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -95,7 +95,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/koganezawa.php">
-                <img src="assets/images/person_04a.png" alt="小金沢 豊">
+                <img src="assets/images/person_04a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -103,7 +103,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/watanabe.php">
-                <img src="assets/images/person_05a.png" alt="渡邊 慶司">
+                <img src="assets/images/person_05a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -111,7 +111,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off">
-                <img src="assets/images/person_06a.png" alt="坂井 飛鳥">
+                <img src="assets/images/person_06a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -119,7 +119,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off">
-                <img src="assets/images/person_07a.png" alt="坂井 飛鳥">
+                <img src="assets/images/person_07a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -127,7 +127,7 @@
           <li class="wk-memberBox__item">
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off">
-                <img src="assets/images/person_08a.png" alt="坂井 飛鳥">
+                <img src="assets/images/person_08a.png" alt="">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -155,7 +155,7 @@
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--01 u-dn-md">
-					<img src="assets/images/step01-sp.png" alt="設計 松枝 克弥,新津 美里" usemap="#image-map01">
+					<img src="assets/images/step01-sp.png" alt="" usemap="#image-map01">
 					<!-- <map name="image-map01">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="181,-1,233,160" shape="rect">
 						<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="268,0,323,160" shape="rect">
@@ -173,7 +173,7 @@
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--02 u-dn-md">
-					<img src="assets/images/step02-sp.png" alt="設計 松枝 克弥, 新津 美里" usemap="#image-map02">
+					<img src="assets/images/step02-sp.png" alt="" usemap="#image-map02">
 					<!-- <map name="image-map02">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="221,-1,279,164" shape="rect">
     				<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="299,0,367,164" shape="rect">
@@ -199,7 +199,7 @@
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--03 u-dn-md">
-					<img src="assets/images/step03-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵" usemap="#image-map03">
+					<img src="assets/images/step03-sp.png" alt="" usemap="#image-map03">
 					<!-- <map name="image-map03">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="219,0,283,165" shape="rect">
 						<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="300,0,366,167" shape="rect">
@@ -224,7 +224,7 @@
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--04 u-dn-md">
-					<img src="assets/images/step04-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊" usemap="#image-map04">
+					<img src="assets/images/step04-sp.png" alt="" usemap="#image-map04">
 					<!-- <map name="image-map04">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="212,0,273,166" shape="rect">
 						<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="294,1,377,167" shape="rect">
@@ -251,7 +251,7 @@
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--05 u-dn-md">
-					<img src="assets/images/step05-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊" usemap="#image-map05">
+					<img src="assets/images/step05-sp.png" alt="" usemap="#image-map05">
 					<!-- <map name="image-map05">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="215,0,283,163" shape="rect">
 						<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="298,0,360,165" shape="rect">
@@ -279,7 +279,7 @@
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--06 u-dn-md">
-					<img src="assets/images/step06-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊,渡邊 慶司" usemap="#image-map06">
+					<img src="assets/images/step06-sp.png" alt="" usemap="#image-map06">
 					<!-- <map name="image-map06">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="217,0,277,162" shape="rect">
 						<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="305,167,361,0" shape="rect">
@@ -311,7 +311,7 @@
 				</div>
 				<a href="/reform/" class="wk-flowBox__button u-text-wh u-dn-md">三井のリフォーム</a>
 				<div class="wk-memberBox--sp wk-memberBox--sp--07 u-dn-md">
-					<img src="assets/images/step07-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊,渡邊 慶司,坂井 飛鳥" usemap="#image-map07">
+					<img src="assets/images/step07-sp.png" alt="" usemap="#image-map07">
 					<!-- <map name="image-map07">
 						<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="70,166,0,0" shape="rect">
 						<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="94,1,157,166" shape="rect">

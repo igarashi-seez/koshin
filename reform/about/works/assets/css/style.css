@@ -32,9 +32,18 @@
   right: 4%;
 }
 
+@media screen and (max-width: 1543px) {
+  .wk-hero__figure {
+    right: -10%;
+  }
+}
 @media screen and (max-width: 991px) {
   .wk-hero__copy {
     font-size: 2.4rem;
+  }
+  .wk-hero__figure {
+    right: -20%;
+    width: 43%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -336,18 +345,18 @@
     margin-left: -0.9em;
   }
   .wk-flowBox__dashed--04::before {
-    left: 90.5%;
+    left: 87.5%;
   }
   .wk-flowBox--05 .wk-flowBox__label {
-    left: 85.2%;
+    left: 82.2%;
     width: 10.5rem;
   }
   .wk-flowBox--05 .wk-flowBox__label span {
     scale: 0.7;
-    margin-left: -0.9em;
+    margin-left: -1.3em;
   }
   .wk-flowBox__dashed--05::before {
-    left: 100%;
+    left: 98%;
   }
   .wk-flowBox--06 .wk-flowBox__label {
     left: 91%;
@@ -599,12 +608,27 @@
   min-width: 1270px;
 }
 
+@media screen and (max-width: 1543px) {
+  .wk-contentInner--member {
+    max-width: 120rem;
+    min-width: auto;
+  }
+  .wk-memberBox {
+    left: 0;
+  }
+  .wk-memberBox__list {
+    width: 72%;
+  }
+}
 @media screen and (max-width: 1199px) {
   .wk-contentInner {
     width: 90%;
   }
   .wk-contentInner--member {
     min-width: auto;
+  }
+  .wk-memberBox__list {
+    width: 66%;
   }
 }
 @media screen and (max-width: 767px) {
