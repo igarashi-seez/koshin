@@ -19,7 +19,7 @@
 // }
 @mixin _mq-down($breakpoint: $_default-breakpoint) {
   @if map-has-key($_breakpoint-down, $breakpoint) {
-    @media #{inspect(map-get($_breakpoint-down, $breakpoint))} {
+    @media #{map-get($_breakpoint-down, $breakpoint)} {
       @content;
     }
   } @else {

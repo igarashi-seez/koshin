@@ -52,7 +52,7 @@
 
 
   <div class="wk-hero">
-    <div class="wk-hero__img container"><img src="assets/images/main.jpg" alt="社員の集合写真（右から、渡邊 慶司、山本 恭兵、新津 美里、小金沢 豊、松枝 克弥、坂井 飛鳥）"></div>
+    <div class="wk-hero__img container"><img src="assets/images/main.jpg" alt=""></div>
     <div class="wk-hero__inner u-text-wh">
       <div class="container container-sm">
         <div class="wk-hero__content">
@@ -66,7 +66,7 @@
 	<div class="wk-flowBox wk-flowBox--00 u-text-wh u-text-center">各プロフェッショナルが連携し、<br>お客様の住まいづくりを<br class="u-dn-md">カタチにします。</div>
 	<div class="wk-flowBox__wrapper">
 		<div class="wk-memberBox u-dn u-db-md">
-      <div class="wk-contentInner">
+      <div class="wk-contentInner wk-contentInner--member">
         <ul class="wk-memberBox__list">
           <li class="wk-memberBox__item">
             <p>
@@ -112,6 +112,22 @@
             <p>
               <div class="wk-memberBox__item--link wk-memberBox__item--link-off">
                 <img src="assets/images/person_06a.png" alt="坂井 飛鳥">
+                <!-- <span>READ<br>MORE ></span> -->
+              </div>
+            </p>
+          </li>
+          <li class="wk-memberBox__item">
+            <p>
+              <div class="wk-memberBox__item--link wk-memberBox__item--link-off">
+                <img src="assets/images/person_07a.png" alt="坂井 飛鳥">
+                <!-- <span>READ<br>MORE ></span> -->
+              </div>
+            </p>
+          </li>
+          <li class="wk-memberBox__item">
+            <p>
+              <div class="wk-memberBox__item--link wk-memberBox__item--link-off">
+                <img src="assets/images/person_08a.png" alt="坂井 飛鳥">
                 <!-- <span>READ<br>MORE ></span> -->
               </div>
             </p>
@@ -169,6 +185,7 @@
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--02-02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>03</div>
 						<h3 class="u-text-bold">プランのご提案</h3>
@@ -176,6 +193,9 @@
 					</div>
 					<div class="wk-flowBox__label u-text-center u-dn u-db-md">
 						<p class="u-text-bold">設計<span class="u-text-uppercase">Design</span></p>
+					</div>
+					<div class="wk-flowBox__label wk-flowBox__label--small wk-flowBox__label-02 u-text-center u-dn u-db-md">
+						<p class="u-text-bold">設計<br>コンサル<br>タント<span class="u-text-uppercase">DESIGN CONSULTANT</span></p>
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--03 u-dn-md">
@@ -192,14 +212,15 @@
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--02-02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--03 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>04</div>
 						<h3 class="u-text-bold">ご契約・詳細打ち合わせ</h3>
 						<p class="u-text-justify">ご契約後は、設計をより詳細に詰めていきます。間取りや外観はもちろん、キッチンや家具、照明、カーテンなどのインテリアデザインも打ち合わせます。スイッチやコンセントの位置も重要です。毎日の暮らしをイメージしながら考えます。</p>
 					</div>
-					<div class="wk-flowBox__label u-text-center u-dn u-db-md">
-						<p class="u-text-bold">施工<span class="u-text-uppercase">Construction</span></p>
+					<div class="wk-flowBox__label wk-flowBox__label--small u-text-center u-dn u-db-md">
+						<p class="u-text-bold">インテリア<br>コーディ<br>ネーター<span class="u-text-uppercase">INTERIOR COORDINATOR</span></p>
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--04 u-dn-md">
@@ -217,11 +238,16 @@
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--02-02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--03 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--04 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>05</div>
 						<h3 class="u-text-bold">着工・お引き渡し</h3>
 						<p class="u-text-justify">基礎工事、建方工事、インテリアやエクステリアの工事を進めます。完成後は三井ホームの社内検査とお客様検査の竣工確認を行い、お引き渡しとなります。<br>お客様の笑顔やご家族の喜ぶ姿は、私たちの喜びとなる瞬間です。</p>
+					</div>
+					<div class="wk-flowBox__label u-text-center u-dn u-db-md">
+						<p class="u-text-bold">工事<span class="u-text-uppercase">CONSTRUCTION</span></p>
 					</div>
 				</div>
 				<div class="wk-memberBox--sp wk-memberBox--sp--05 u-dn-md">
@@ -239,8 +265,10 @@
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--02-02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--03 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--04 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--05 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>06</div>
 						<h3 class="u-text-bold">アフターフォロー</h3>
@@ -266,9 +294,11 @@
 				<div class="wk-contentInner">
 					<div class="wk-flowBox__dashed--01 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--02 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--02-02 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--03 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--04 u-dn u-db-md"></div>
 					<div class="wk-flowBox__dashed--05 u-dn u-db-md"></div>
+					<div class="wk-flowBox__dashed--06 u-dn u-db-md"></div>
 					<div class="wk-flowBox__cotent">
 						<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>07</div>
 						<h3 class="u-text-bold">リフォームのご相談</h3>
@@ -291,7 +321,7 @@
 						<area target="" alt="" title="" href="/about/staff/sakai.php" coords="453,314,517,477" shape="rect">
 					</map> -->
 				</div><!-- //.wk-memberBox--sp -->
-			</li><!-- //.wk-flowBox -->
+			</li>
 		</ul><!-- //.wk-flowBox__wrapper -->
 	</div>
 

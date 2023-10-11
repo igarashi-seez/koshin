@@ -1,0 +1,445 @@
+.wk-flowBox__wrapper {
+  position: relative;
+}
+
+.wk-flowBox {
+  position: relative;
+}
+
+.wk-flowBox--00 {
+  padding: 10rem 0;
+  font-size: 3.2rem;
+  line-height: 1.1875;
+}
+
+// バックグラウンドの灰色を各flowBoxに定義
+@for $i from 0 through 7 {
+  .wk-flowBox--0#{$i} { background-color:  map-get($map: $_bg-gray, $key: $i); }
+}
+
+// flowBox内のコンテンツ
+.wk-flowBox__cotent {
+  width: 50%;
+  min-height: 37.5rem;
+  padding: 8.5rem 0;
+
+  h3 {
+    position: relative;
+    font-size: 3.2rem;
+  }
+
+  p {
+    width: 50%;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+}
+
+// 各セクションの番号
+.wk-flowBox__num {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12rem;
+  line-height: .8;
+  
+  span {
+    padding-right: 1rem;
+    font-size: 1.8rem;
+  }
+}
+// テキストの色を各セクション番号に定義
+@for $i from 1 through 7 {
+  .wk-flowBox--0#{$i} .wk-flowBox__num { color:  map-get($map: $_text-gray, $key: $i); }
+}
+
+// 07の赤いボタン
+.wk-flowBox__button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  background-color: $_color-red;
+
+  @include _on-event{
+    background-color: #333333;
+  }
+}
+
+// 営業、設計、施工のボックス
+.wk-flowBox__label {
+  position: absolute;
+  display: inline-block;
+  width: 9.5rem;
+  padding: 1.6rem 0;
+  top: 1.8rem;
+  background: #fff;
+  color: map-get($map: $_bg-gray, $key: 1);
+  font-size: 1.8rem;
+  line-height: 1;
+
+  span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    scale: 0.8;
+  }
+}
+.wk-flowBox__label--small {
+  font-size: 1.6rem;
+  line-height: calc(19/16);
+  white-space: nowrap;
+  padding: 0.8rem 0;
+}
+
+// 縦方向の点線と営業、設計、施工の横方向の位置
+%flowBox__dashed {
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    border-left: 4px dashed #fff;
+    transform: translateX(-50%);
+  }
+}
+
+// 1本目
+.wk-flowBox__dashed--01 {
+  &::before {
+    @extend %flowBox__dashed;
+    left: 41.8%;
+  }
+}
+
+.wk-flowBox--01 .wk-flowBox__label {
+  left: 38%;
+}
+
+.wk-flowBox--01 {
+  .wk-flowBox__dashed--01 {
+    &::before {
+      height: 80%;
+    }
+  }
+}
+
+// 2本目
+.wk-flowBox__dashed--02 {
+  &::before {
+    @extend %flowBox__dashed;
+    left: 56.5%;
+  }
+}
+
+.wk-flowBox--02 .wk-flowBox__label {
+  left: 52.9%;
+}
+
+.wk-flowBox--02 {
+  .wk-flowBox__dashed--02 {
+    &::before {
+      height: 80%;
+    }
+  }
+}
+
+// 3本目
+.wk-flowBox__dashed--03 {
+  &::before {
+    @extend %flowBox__dashed;
+    left: 70.9%;
+  }
+}
+
+.wk-flowBox--04 .wk-flowBox__label {
+  left: 67%;
+  span {
+    scale: 0.7;
+    margin-left: -0.9em;
+  }
+}
+
+.wk-flowBox--04 {
+  .wk-flowBox__dashed--03 {
+    &::before {
+      height: 80%;
+    }
+  }
+}
+
+// 4本目
+.wk-flowBox__dashed--04 {
+  &::before {
+    @extend %flowBox__dashed;
+    left: 85.5%;
+  }
+}
+
+.wk-flowBox--05 .wk-flowBox__label {
+  left: 81.2%;
+  width: 10.5rem;
+  span {
+    scale: 0.7;
+    margin-left: -0.9em;
+  }
+}
+
+
+.wk-flowBox--05 {
+  .wk-flowBox__dashed--04 {
+    &::before {
+      height: 80%;
+    }
+  }
+}
+
+// 5本目
+.wk-flowBox__dashed--05 {
+  &::before {
+    @extend %flowBox__dashed;
+    left: 100%;
+  }
+}
+
+.wk-flowBox--06 .wk-flowBox__label {
+  left: 96%;
+}
+
+.wk-flowBox--06 {
+  .wk-flowBox__dashed--05 {
+    &::before {
+      height: 80%;
+    }
+  }
+}
+
+
+
+// 1200px以下
+@include _mq-down('lg'){
+
+  .wk-flowBox--00 {
+    padding: 8.33vw 0;
+    font-size: 2.67vw;
+  }
+  .wk-flowBox__cotent {
+    min-height: 31.25vw;
+    padding: 7.08vw 0;
+    h3 {
+      font-size: 2.67vw;
+    }
+  
+    p {
+      margin-top: 1.5vw;
+      font-size: 1.17vw;
+    }
+  }
+
+  // 各セクションの番号
+  .wk-flowBox__num {
+    font-size: 10vw;
+    
+    span {
+      padding-right: .8vw;
+      font-size: 1.5vw;
+    }
+  }
+  
+  // 07の赤いボタン
+  .wk-flowBox__button {
+    margin-top: 1.5vw;
+    padding: .83vw 2.5vw;
+    font-size: 1.4rem;
+  }
+
+  // 営業、設計、施工のボックス
+  .wk-flowBox__label {
+    width: 7vw;
+    padding: 1.25vw 0;
+    top: 1.5vw;
+    font-size: 1.67vw;
+
+    span {
+      font-size: 1vw;
+      margin-top: .5vw;
+    }
+  }
+  .wk-flowBox__label--small {
+    width: 12vw;
+    font-size: 1.67vw;
+  }
+
+  // // 縦方向の点線と営業、設計、施工の横方向の位置
+  // .wk-flowBox__dashed--01 {
+  //   &::before {
+  //     left: 39%;
+  //   }
+  // }
+  // .wk-flowBox__dashed--02 {
+  //   &::before {
+  //     left: 58.5%;
+  //   }
+  // }
+  // .wk-flowBox__dashed--03 {
+  //   &::before {
+  //     left: 78%;
+  //   }
+  // }
+
+  // 1本目
+  .wk-flowBox__dashed--01 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 47.8%;
+    }
+  }
+
+  .wk-flowBox--01 .wk-flowBox__label {
+    left: 44%;
+  }
+
+  .wk-flowBox--01 {
+    .wk-flowBox__dashed--01 {
+      &::before {
+        height: 87%;
+      }
+    }
+  }
+
+
+  // 2本目
+  .wk-flowBox__dashed--02 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 62.5%;
+    }
+  }
+
+  .wk-flowBox--02 .wk-flowBox__label {
+    left: 55.9%;
+  }
+
+  .wk-flowBox--02 {
+    .wk-flowBox__dashed--02 {
+      &::before {
+        height: 80%;
+      }
+    }
+  }
+
+  // 3本目
+  .wk-flowBox__dashed--03 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 75.9%;
+    }
+  }
+
+  .wk-flowBox--04 .wk-flowBox__label {
+    left: 69%;
+    span {
+      scale: 0.7;
+      margin-left: -0.9em;
+    }
+  }
+
+  // 4本目
+  .wk-flowBox__dashed--04 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 90.5%;
+    }
+  }
+
+  .wk-flowBox--05 .wk-flowBox__label {
+    left: 85.2%;
+    width: 10.5rem;
+    span {
+      scale: 0.7;
+      margin-left: -0.9em;
+    }
+  }
+
+
+  // 5本目
+  .wk-flowBox__dashed--05 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 100%;
+    }
+  }
+
+  .wk-flowBox--06 .wk-flowBox__label {
+    left: 91%;
+  }
+
+
+}
+
+// 768以下
+@include _mq-down('md'){
+  
+  .wk-flowBox {
+    &:not(root){
+      height: 128.521vw;
+    }
+    padding-bottom: 5.33vw;
+  }
+  .wk-flowBox--00 {
+    &:not(root) {
+      height: auto;
+    }
+    padding: 10vw 0;
+    font-size: 5.33vw;
+    line-height: 1.6;
+  }
+  
+  // flowBox内のコンテンツ
+  .wk-flowBox__cotent {
+    width: 100%;
+    padding: 5.33vw 0;
+    min-height: 57.5vw;
+  
+    h3 {
+      margin-top: -4.8vw;
+      font-size: 6.93vw;
+      text-align: center;
+    }
+  
+    p {
+      width: 100%;
+      margin-top: 2vw;
+      font-size: 2.933vw;
+    }
+  }
+  
+  // 各セクションの番号
+  .wk-flowBox__num {
+    position: relative;
+    justify-content: center;
+    padding-left: 4%;
+    font-size: 21.3vw;
+    line-height: 1;
+    
+    span {
+      padding-right: 2.67vw;
+      font-size: 4.8vw;
+    }
+  }
+  
+  // 07の赤いボタン
+  .wk-flowBox__button {
+    position: absolute;
+    bottom: -0.67vw;
+    left: 1rem;
+    padding: 1vw 5.33vw;
+    font-size: 3.73vw;
+  }
+}
