@@ -230,7 +230,7 @@
     font-size: 2.67vw;
   }
   .wk-flowBox__cotent {
-    min-height: 51.25vw;
+    min-height: 31.25vw;
     padding: 7.08vw 0;
     h3 {
       font-size: 2.67vw;
@@ -261,10 +261,10 @@
 
   // 営業、設計、施工のボックス
   .wk-flowBox__label {
-    width: 10vw;
+    width: 7vw;
     padding: 1.25vw 0;
     top: 1.5vw;
-    font-size: 2.67vw;
+    font-size: 1.67vw;
 
     span {
       font-size: 1vw;
@@ -272,8 +272,8 @@
     }
   }
   .wk-flowBox__label--small {
-    width: 10.83vw;
-    font-size: 2.08vw;
+    width: 12vw;
+    font-size: 1.67vw;
   }
 
   // // 縦方向の点線と営業、設計、施工の横方向の位置
@@ -292,6 +292,94 @@
   //     left: 78%;
   //   }
   // }
+
+  // 1本目
+  .wk-flowBox__dashed--01 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 47.8%;
+    }
+  }
+
+  .wk-flowBox--01 .wk-flowBox__label {
+    left: 44%;
+  }
+
+  .wk-flowBox--01 {
+    .wk-flowBox__dashed--01 {
+      &::before {
+        height: 87%;
+      }
+    }
+  }
+
+
+  // 2本目
+  .wk-flowBox__dashed--02 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 62.5%;
+    }
+  }
+
+  .wk-flowBox--02 .wk-flowBox__label {
+    left: 55.9%;
+  }
+
+  .wk-flowBox--02 {
+    .wk-flowBox__dashed--02 {
+      &::before {
+        height: 80%;
+      }
+    }
+  }
+
+  // 3本目
+  .wk-flowBox__dashed--03 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 75.9%;
+    }
+  }
+
+  .wk-flowBox--04 .wk-flowBox__label {
+    left: 69%;
+    span {
+      scale: 0.7;
+      margin-left: -0.9em;
+    }
+  }
+
+  // 4本目
+  .wk-flowBox__dashed--04 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 90.5%;
+    }
+  }
+
+  .wk-flowBox--05 .wk-flowBox__label {
+    left: 85.2%;
+    width: 10.5rem;
+    span {
+      scale: 0.7;
+      margin-left: -0.9em;
+    }
+  }
+
+
+  // 5本目
+  .wk-flowBox__dashed--05 {
+    &::before {
+      @extend %flowBox__dashed;
+      left: 100%;
+    }
+  }
+
+  .wk-flowBox--06 .wk-flowBox__label {
+    left: 91%;
+  }
+
 
 }
 
@@ -317,6 +405,7 @@
   .wk-flowBox__cotent {
     width: 100%;
     padding: 5.33vw 0;
+    min-height: 57.5vw;
   
     h3 {
       margin-top: -4.8vw;

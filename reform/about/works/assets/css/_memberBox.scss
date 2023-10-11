@@ -114,7 +114,10 @@ list-style: none;
 @include _mq-down('lg'){
   .wk-memberBox {
     top: 6.25vw;
-    left: -9vw;
+    left: 3vw;
+}
+  .wk-memberBox__list {
+    width: 70%;
   }
   // .wk-memberBox__list {
   //   li {
@@ -139,7 +142,7 @@ list-style: none;
       font-size: 1.75vw;
     }
     img {
-      max-width: 10.42vw;
+      max-width: 14.42vw;
       max-height: 25vw;
     }
   }

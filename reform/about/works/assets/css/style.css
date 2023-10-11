@@ -271,7 +271,7 @@
     font-size: 2.67vw;
   }
   .wk-flowBox__cotent {
-    min-height: 51.25vw;
+    min-height: 31.25vw;
     padding: 7.08vw 0;
   }
   .wk-flowBox__cotent h3 {
@@ -294,18 +294,63 @@
     font-size: 1.4rem;
   }
   .wk-flowBox__label {
-    width: 10vw;
+    width: 7vw;
     padding: 1.25vw 0;
     top: 1.5vw;
-    font-size: 2.67vw;
+    font-size: 1.67vw;
   }
   .wk-flowBox__label span {
     font-size: 1vw;
     margin-top: 0.5vw;
   }
   .wk-flowBox__label--small {
-    width: 10.83vw;
-    font-size: 2.08vw;
+    width: 12vw;
+    font-size: 1.67vw;
+  }
+  .wk-flowBox__dashed--01::before {
+    left: 47.8%;
+  }
+  .wk-flowBox--01 .wk-flowBox__label {
+    left: 44%;
+  }
+  .wk-flowBox--01 .wk-flowBox__dashed--01::before {
+    height: 87%;
+  }
+  .wk-flowBox__dashed--02::before {
+    left: 62.5%;
+  }
+  .wk-flowBox--02 .wk-flowBox__label {
+    left: 55.9%;
+  }
+  .wk-flowBox--02 .wk-flowBox__dashed--02::before {
+    height: 80%;
+  }
+  .wk-flowBox__dashed--03::before {
+    left: 75.9%;
+  }
+  .wk-flowBox--04 .wk-flowBox__label {
+    left: 69%;
+  }
+  .wk-flowBox--04 .wk-flowBox__label span {
+    scale: 0.7;
+    margin-left: -0.9em;
+  }
+  .wk-flowBox__dashed--04::before {
+    left: 90.5%;
+  }
+  .wk-flowBox--05 .wk-flowBox__label {
+    left: 85.2%;
+    width: 10.5rem;
+  }
+  .wk-flowBox--05 .wk-flowBox__label span {
+    scale: 0.7;
+    margin-left: -0.9em;
+  }
+  .wk-flowBox__dashed--05::before {
+    left: 100%;
+  }
+  .wk-flowBox--06 .wk-flowBox__label {
+    left: 91%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -326,6 +371,7 @@
   .wk-flowBox__cotent {
     width: 100%;
     padding: 5.33vw 0;
+    min-height: 57.5vw;
   }
   .wk-flowBox__cotent h3 {
     margin-top: -4.8vw;
@@ -427,13 +473,16 @@
 @media screen and (max-width: 1199px) {
   .wk-memberBox {
     top: 6.25vw;
-    left: -9vw;
+    left: 3vw;
+  }
+  .wk-memberBox__list {
+    width: 70%;
   }
   .wk-memberBox__item--link span {
     font-size: 1.75vw;
   }
   .wk-memberBox__item--link img {
-    max-width: 10.42vw;
+    max-width: 14.42vw;
     max-height: 25vw;
   }
 }
@@ -547,12 +596,15 @@
 }
 .wk-contentInner--member {
   max-width: 145rem;
-  min-width: 1380px;
+  min-width: 1270px;
 }
 
 @media screen and (max-width: 1199px) {
   .wk-contentInner {
     width: 90%;
+  }
+  .wk-contentInner--member {
+    min-width: auto;
   }
 }
 @media screen and (max-width: 767px) {
