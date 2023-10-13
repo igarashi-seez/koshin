@@ -115,6 +115,7 @@ list-style: none;
   .wk-memberBox {
     top: 6.25vw;
     left: 3vw;
+    width: calc(100% - 3vw);
   }
   .wk-memberBox__list {
     width: 70%;
