@@ -59,7 +59,7 @@ $pageName = "私たちの仕事";
 		<div class="container container-sm">
 			<div class="wk-hero__content">
 				<div class="wk-hero__copy u-text-bold">想いをカタチにしていく、<br> 住まいづくりのスタッフ</div>
-				<div class="wk-hero__text mt-6">「いまの家を大切にしたい」というお客様の想いをカタチに、<br class="u-dn-ml">一邸一邸心を込め、<br>リフォーム後も永く細やかにサポートしていく。<br>三井のリフォームの各分野の専門家たちが連携をとりながら、<br class="u-dn-ml">お客様の多彩なニーズに対応し、<br>より心地よい住まいを提案いたします。</div>
+				<div class="wk-hero__text mt-6">「いまの家を大切にしたい」というお客様の想いをカタチに、一邸一邸心を込め、<br class="u-dn u-db-md">リフォーム後も永く細やかにサポートしていく。<br>三井のリフォームの各分野の専門家たちが連携をとりながら、お客様の多彩なニーズに対応し、<br class="u-dn u-db-md">より心地よい住まいを提案いたします。</div>
 				<div class="wk-hero__figure u-dn u-db-md"><img src="assets/images/support.png" alt=""></div>
 			</div>
 		</div>
