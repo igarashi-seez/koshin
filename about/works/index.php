@@ -57,7 +57,7 @@
       <div class="container container-sm">
         <div class="wk-hero__content">
           <div class="wk-hero__copy u-text-bold">夢をカタチにしていく、<br> 住まいづくりのスタッフ</div>
-          <div class="wk-hero__text mt-6">出会いを大切に育み、お客様の夢をカタチにし、<br class="u-dn-ml">一邸一邸心を込めて創り、<br class="u-dn u-db-md">建てたあとも永く細やかにサポートしていく。<br>三井ホームの各担当者は、それぞれの役割を果たしながら、全員が一丸となって、<br class="u-dn u-db-md">お客様の家づくりをお手伝いいたします。</div>
+          <div class="wk-hero__text mt-6">出会いを大切に育み、お客様の夢をカタチにし、一邸一邸心を込めて創り、<br class="u-dn u-db-md">建てたあとも永く細やかにサポートしていく。<br>三井ホームの各担当者は、それぞれの役割を果たしながら、全員が一丸となって、<br class="u-dn u-db-md">お客様の家づくりをお手伝いいたします。</div>
           <div class="wk-hero__figure u-dn u-db-md"><img src="assets/images/support.png" alt="お客様を中心に私たち営業・設計、工事・検査、オーナーサポートの仕事が巡っています。"></div>
         </div>
       </div>
