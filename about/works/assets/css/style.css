@@ -16,6 +16,10 @@
   line-height: 1.1875;
 }
 
+.wk-hero__text {
+  width: 60%;
+}
+
 .wk-hero__figure {
   position: absolute;
   width: 30%;
@@ -33,6 +37,9 @@
     margin-top: -19%;
     padding: 25% 0 13%;
     background-image: url(/assets/images/about/bg_sp.jpg);
+  }
+  .wk-hero__text {
+    width: auto;
   }
 }
 .wk-flowBox__wrapper {

@@ -25,6 +25,10 @@
   line-height: 1.1875;
 }
 
+.wk-hero__text {
+  width: 76%;
+}
+
 .wk-hero__figure {
   position: absolute;
   width: 32%;
@@ -51,6 +55,9 @@
     margin-top: -19%;
     padding: 25% 0 13%;
     background-image: url(/reform/about/works/assets/images/bg_sp.jpg);
+  }
+  .wk-hero__text {
+    width: auto;
   }
 }
 .wk-flowBox__wrapper {
