@@ -148,7 +148,7 @@ $pageName = "私たちの仕事";
 				<div class="wk-flowBox__cotent">
 					<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>02</div>
 					<h3 class="u-text-bold">ご提案</h3>
-					<p class="u-text-justify">お客様との対話から得られた内容をもとに、平面図や外観パース、インテリア、エクステリアのイメージなどを作ります。より具体的に想像できる、こだわりのプランを作成します。</p>
+					<p class="u-text-justify">お客様との対話から得られた内容をもとに、平面図や外観パース、インテリア、エクステリアのイメージなどを作ります。より具体的に想像できる、こだわりのプランを作成しその後お見積りをご提示いたします。</p>
 				</div>
 				<div class="wk-flowBox__label wk-flowBox__label--small u-text-center u-dn u-db-md">
 					<p class="u-text-bold">リフォーム<br>プランナー<span class="u-text-uppercase">REFORM PLANNER</span></p>
@@ -244,7 +244,7 @@ $pageName = "私たちの仕事";
 				<div class="wk-flowBox__cotent">
 					<div class="wk-flowBox__num u-text-middle"><span class="u-text-uppercase">Step</span>06</div>
 					<h3 class="u-text-bold">アフターフォロー</h3>
-					<p class="u-text-justify">お客様との本当のお付き合いは、完成した家を引き渡して終わりではなく、お引渡しから「一生のおつきあい」が始まります。<br>お客様が新生活をスタートさせた後も、急な不具合も気軽に相談できる「24時間コールセンター受付」や、定期的にチェックする「定期アフターメンテナンスサービス」などをご提供し、お客様とのさらなる信頼を築いてまいります。</p>
+					<p class="u-text-justify">お客様との本当のお付き合いは、完成した家を引き渡して終わりではなく、お引渡しから「一生のおつきあい」が始まります。<br>お客様が新生活をスタートさせた後も、急な不具合も気軽に相談できる「24時間コールセンター受付」などをご提供し、お客様とのさらなる信頼を築いてまいります。</p>
 				</div>
 				<div class="wk-flowBox__label wk-flowBox__label--small u-text-center u-dn u-db-md">
 					<p class="u-text-bold">メンテ<br>ナンス<br>スタッフ<span class="u-text-uppercase">MAINTENANCE STAFF</span></p>
