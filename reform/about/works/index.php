@@ -80,18 +80,18 @@ $pageName = "私たちの仕事";
 				</li>
 				<li class="wk-memberBox__item">
 					<p>
-						<div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/niitsu.php">
+						<a class="wk-memberBox__item--link" href="./reform_planner/">
 							<img src="assets/images/r_person_02a.png" alt="">
 							<!-- <span>READ<br>MORE ></span> -->
-						</div>
+						</a>
 					</p>
 				</li>
 				<li class="wk-memberBox__item">
 					<p>
-						<div class="wk-memberBox__item--link wk-memberBox__item--link-off" href="/about/staff/yamamoto.php">
+						<a class="wk-memberBox__item--link" href="/about/ic/">
 							<img src="assets/images/r_person_03a.png" alt="">
 							<!-- <span>READ<br>MORE ></span> -->
-						</div>
+						</a>
 					</p>
 				</li>
 				<li class="wk-memberBox__item">
@@ -156,10 +156,10 @@ $pageName = "私たちの仕事";
 			</div>
 			<div class="wk-memberBox--sp wk-memberBox--sp--02 u-dn-md">
 				<img src="assets/images/step02-sp.png" alt="設計 松枝 克弥, 新津 美里" usemap="#image-map02">
-				<!-- <map name="image-map02">
-					<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="221,-1,279,164" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="299,0,367,164" shape="rect">
-				</map> -->
+				<map name="image-map02">
+					<!-- <area target="" alt="" title="" href="/about/staff/matsueda.php" coords="221,-1,279,164" shape="rect"> -->
+					<area target="" alt="" title="" href="./reform_planner/" coords="292,60,348,261" shape="rect">
+				</map>
 			</div><!-- //.wk-memberBox--sp -->
 		</li><!-- //.wk-flowBox -->
 
@@ -175,11 +175,11 @@ $pageName = "私たちの仕事";
 			</div>
 			<div class="wk-memberBox--sp wk-memberBox--sp--03 u-dn-md">
 				<img src="assets/images/step03-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵" usemap="#image-map03">
-				<!-- <map name="image-map03">
-					<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="219,0,283,165" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="300,0,366,167" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/yamamoto.php" coords="393,71,444,233" shape="rect">
-				</map> -->
+				<map name="image-map03">
+					<!-- <area target="" alt="" title="" href="/about/staff/matsueda.php" coords="219,0,283,165" shape="rect"> -->
+					<area target="" alt="" title="" href="./reform_planner/" coords="300,0,366,167" shape="rect">
+					<!-- <<area target="" alt="" title="" href="/about/staff/yamamoto.php" coords="393,71,444,233" shape="rect"> -->
+				</map>
 			</div><!-- //.wk-memberBox--sp -->
 		</li><!-- //.wk-flowBox -->
 
@@ -199,12 +199,12 @@ $pageName = "私たちの仕事";
 			</div>
 			<div class="wk-memberBox--sp wk-memberBox--sp--04 u-dn-md">
 				<img src="assets/images/step04-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊" usemap="#image-map04">
-				<!-- <map name="image-map04">
-					<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="212,0,273,166" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="294,1,377,167" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/yamamoto.php" coords="398,70,454,231" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/koganezawa.php" coords="475,146,548,313" shape="rect">
-				</map> -->
+				<map name="image-map04">
+					<!-- <area target="" alt="" title="" href="/about/staff/matsueda.php" coords="212,0,273,166" shape="rect"> -->
+					<area target="" alt="" title="" href="/reform_planner/" coords="294,1,377,167" shape="rect">
+					<area target="" alt="" title="" href="/about/ic/" coords="398,70,454,231" shape="rect">
+					<!-- <area target="" alt="" title="" href="/about/staff/koganezawa.php" coords="475,146,548,313" shape="rect"> -->
+				</map>
 			</div><!-- //.wk-memberBox--sp -->
 		</li><!-- //.wk-flowBox -->
 
@@ -225,12 +225,12 @@ $pageName = "私たちの仕事";
 			</div>
 			<div class="wk-memberBox--sp wk-memberBox--sp--05 u-dn-md">
 				<img src="assets/images/step05-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊" usemap="#image-map05">
-				<!-- <map name="image-map05">
-					<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="215,0,283,163" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="298,0,360,165" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/yamamoto.php" coords="384,71,457,238" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/koganezawa.php" coords="472,151,538,315" shape="rect">
-				</map> -->
+				<map name="image-map05">
+					<!-- <area target="" alt="" title="" href="/about/staff/matsueda.php" coords="215,0,283,163" shape="rect"> -->
+					<area target="" alt="" title="" href="/reform_planner/" coords="298,0,360,165" shape="rect">
+					<area target="" alt="" title="" href="/about/ic/" coords="384,71,457,238" shape="rect">
+					<!-- <area target="" alt="" title="" href="/about/staff/koganezawa.php" coords="472,151,538,315" shape="rect"> -->
+				</map>
 			</div><!-- //.wk-memberBox--sp -->
 		</li><!-- //.wk-flowBox -->
 
@@ -252,13 +252,13 @@ $pageName = "私たちの仕事";
 			</div>
 			<div class="wk-memberBox--sp wk-memberBox--sp--06 u-dn-md">
 				<img src="assets/images/step06-sp.png" alt="営業：松枝 克弥,新津 美里、設計：山本 恭兵、施工：小金沢 豊,渡邊 慶司" usemap="#image-map06">
-				<!-- <map name="image-map06">
-					<area target="" alt="" title="" href="/about/staff/matsueda.php" coords="217,0,277,162" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/niitsu.php" coords="305,167,361,0" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/yamamoto.php" coords="394,71,453,235" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/koganezawa.php" coords="482,153,543,318" shape="rect">
-					<area target="" alt="" title="" href="/about/staff/watanabe.php" coords="573,231,632,393" shape="rect">
-				</map> -->
+				<map name="image-map06">
+					<!-- <area target="" alt="" title="" href="/about/staff/matsueda.php" coords="217,0,277,162" shape="rect"> -->
+					<area target="" alt="" title="" href="/reform_planner/" coords="305,167,361,0" shape="rect">
+					<area target="" alt="" title="" href="/about/ic/" coords="394,71,453,235" shape="rect">
+					<!-- <area target="" alt="" title="" href="/about/staff/koganezawa.php" coords="482,153,543,318" shape="rect"> -->
+					<!-- <area target="" alt="" title="" href="/about/staff/watanabe.php" coords="573,231,632,393" shape="rect"> -->
+				</map>
 			</div><!-- //.wk-memberBox--sp -->
 		</li><!-- //.wk-flowBox -->
 
@@ -281,6 +281,32 @@ $pageName = "私たちの仕事";
 		</div>
 	</div>
 <?php */ ?>
+
+	<div class="section02 py-7 py-md-9 py-lg-9">
+		<div class="container container-sm">
+			<h3 class="text-center">
+				<span>リフォームプランナー</span>
+			</h3>
+			<p class="mt-4">デザイン力に評価をいただく三井ホームは、リフォームでもデザイン力にこだわり、リフォーム設計の専門家を「リフォームプランナー」と呼んでいます。<br class="only-pc">プロジェクトマネージャーから依頼されたお客様の家族構成や、１日の暮らしの流れ、ライフスタイルなどを伺って、プロの視点でご提案しています。<br class="only-pc">*「リフォームプランナー®」と呼べるのは「三井のリフォーム」だけ。全国に約155名の「リフォームプランナー®」が在籍しています。<br class="only-pc">*「リフォームプランナー」は三井不動産グループの登録商標です。第4439726号</p>
+			<a href="./reform_planner/" class="btn btn-red btn-xxl mx-auto mt-6">リフォームプランナーページ</a>
+		</div>
+	</div>
+	<div class="section02 py-7 py-md-9 py-lg-9">
+		<div class="container container-sm">
+			<h3 class="text-center">
+				<span>インテリアコーディネーター</span>
+			</h3>
+			<p class="mt-4">三井ホームは早くから家づくりにインテリアコーディネーター制度を導入し、お客様に支持されてまいりました。<br class="only-pc">お好きな絵や色、雰囲気などを画像や文字でお知らせください。経験豊富なインテリアコーディネーターたちが、お客様のライフスタイルやお好みを分析し、お気に入りの空間づくりのお手伝いをさせていただきます。</p>
+			<a href="/about/ic/" class="btn btn-red btn-xxl mx-auto mt-6">インテリアコーディネーターページ</a>
+		</div>
+	</div>
+
+	<div class="section02 py-7 py-md-9 py-lg-9 bg-gray">
+		<div class="container container-sm">
+			<h3 class="mt-4 text-center">リフォームについて<br class="only-sp">ご相談がございましたら、<br>お気軽にご連絡ください。</h3>
+			<a href="https://www.mitsui-reform.com/ssl/contact/?form_type=1" target="_blank" class="btn btn-red btn-xxl mx-auto mt-6">お問い合わせはこちら</a>
+		</div>
+	</div>
 
 </main>
 
