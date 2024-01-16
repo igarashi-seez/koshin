@@ -71,7 +71,8 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 
 			</div>
 
-			<?php /* 省エネリフォーム臨時掲載：ここから */ ?>
+			<?php /* 省エネリフォーム臨時掲載：ここから ※20231013一時非表示 */ ?>
+			<?php /*
 			<div class="ex-banner202303">
 				<a href="/reform/news/reformAll/post-61.php" class="ex-banner202303__link"><img src="/reform/assets/img/banner/ecoreform-202303.jpg" alt="省エネリフォーム相談会開催中！ 補助金最大290万円" width="" height="" loading="lazy"></a>
 			</div><!-- /.ex-banner202303 -->
@@ -109,8 +110,11 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 					}
 				}
 			</style>
+			 */ ?>
 			<?php /* 省エネリフォーム臨時掲載：ここまで */ ?>
       
+			<?php include("../notice.php"); ?>
+			
       <?php /* 新着情報：ここから */ ?>
           <?php include("{$_SERVER['DOCUMENT_ROOT']}/template/entries_form.php"); ?>
       <?php /* 新着情報：ここまで */ ?>

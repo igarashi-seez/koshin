@@ -171,6 +171,7 @@
   z-index: -1;
   background-image: url("/assets/images/reform/decarbonization/bgi/city.svg");
   background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .decarbonizingText {
