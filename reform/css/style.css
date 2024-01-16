@@ -82,3 +82,27 @@ header.globalnav nav .globalnav-body .globalnav-btn-newbuilding:hover{
   }
 }
 /* 20230120追記:ここまで */
+
+.reform-mv-text {
+  pointer-events: none;
+  transition: opacity 1s;
+  opacity: 1;
+}
+.reform-mv-text.-hide {
+  opacity: 0;
+}
+
+body>.reform.index .section-mv .mv-slider .item.item00 {
+  background:center top url("/assets/images/reform/index/mv00.png") no-repeat;
+  background-size:cover
+}
+
+body>.reform.index .section-mv .mv-slider .item.item00 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body>.reform.index .section-mv .mv-slider .item.item00 a:hover {
+  background-color: rgba(255,255,255,.3);
+}
