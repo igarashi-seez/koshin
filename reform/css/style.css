@@ -82,3 +82,99 @@ header.globalnav nav .globalnav-body .globalnav-btn-newbuilding:hover{
   }
 }
 /* 20230120追記:ここまで */
+
+.reform-mv-text {
+  pointer-events: none;
+  transition: opacity 1s;
+  opacity: 1;
+  text-shadow: rgba(0,0,0,.6) 0 0 8px;
+}
+.reform-mv-text.-hide {
+  opacity: 0;
+}
+
+/* MV 詳しくはこちらボタン */
+.reform-mv-text__button-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 303px;
+  max-width: 50%;
+  pointer-events: none;
+}
+
+/* MV 詳しくはこちらボタン 白線 */
+.reform-mv-text__button-wrapper::before,
+.reform-mv-text__button-wrapper::after {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  content: '';
+}
+
+.reform-mv-text__button-wrapper::before {
+  top: 0;
+  left: 0;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+.reform-mv-text__button-wrapper::after {
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* MV 詳しくはこちらボタン 背景部分 */
+.reform-mv-text__button {
+  margin: 4px;
+  position: relative;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  height: 38px;
+  display: grid;
+  place-items: center;
+}
+
+.reform-mv-text__button-bg {
+  mix-blend-mode: multiply;
+  background: #AFAFAF;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (max-width: 1199.98px) {
+  .reform-mv-text__button-wrapper {
+    bottom: 15%;
+  }
+  .reform-mv-text__button {
+    font-size: 1.3rem;
+  }
+}
+
+/* MV追加 */
+body>.reform.index .section-mv .mv-slider .item.item00 {
+  background:center center url("/assets/images/reform/index/mv00.png") no-repeat;
+  background-size:cover
+}
+
+body>.reform.index .section-mv .mv-slider .item.item00 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body>.reform.index .section-mv .mv-slider .item.item00 a:hover {
+  background-color: rgba(255,255,255,.3);
+}
+
+/* 20240201追記:ここまで */

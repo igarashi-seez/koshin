@@ -15,7 +15,7 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 	<link rel="stylesheet" href="../notice.css" media="screen">
 	<link rel="stylesheet" href="./css/slider.css" media="screen">
 	<link rel="stylesheet" href="./css/slick.css" media="screen">
-	<link rel="stylesheet" href="./css/style.css" media="screen">
+	<link rel="stylesheet" href="./css/style.css?240116" media="screen">
 	<script type="text/javascript" src="./js/slick.min.js"></script>
 	<script type="text/javascript" src="./js/slider.js"></script>
 </head>
@@ -31,24 +31,42 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 			<div class="section-mv">
 
 				<div id="mvSlider" class="mv-slider">
+					<div class="item item00">
+						<a href="https://www.mitsuihome-ksa.co.jp/reform/news/south/likeamodelhouse.php"></a>
+						<div class="reform-mv-text__button-wrapper">
+							<div class="reform-mv-text__button">
+								<div class="reform-mv-text__button-bg"></div>
+								詳しくはこちら
+							</div>
+						</div>
+					</div>
 					<div class="item item01"></div>
 					<div class="item item02"></div>
 					<div class="item item03"></div>
 					<div class="item item04"></div>
 					<div class="item item05"></div>
 					<div class="item item06"></div>
-					<div class="item item07"></div>
+					<!-- <div class="item item07"></div> -->
 					<div class="item item08"></div>
 					<div class="item item09"></div>
 					<div class="item item10"></div>
 				</div>
 
-				<div class="text">
+				<div class="text reform-mv-text js-mv-text -hide">
 					<h1>
 						たいせつなことがみえてくる。
 					</h1>
 					<p>
 						デザインリフォームのことなら「三井のリフォーム」へ
+					</p>
+				</div>
+
+				<div class="text reform-mv-text js-mv-modelhouse-text">
+					<h1>
+						Like a modelhouse
+					</h1>
+					<p>
+						三井のリフォームは“まるでモデルハウス”
 					</p>
 				</div>
 
@@ -547,6 +565,21 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 				slidesToShow: 1,
 				lazyLoad: "progressive"
 			});
+			const modelHouseText = document.querySelector('.js-mv-modelhouse-text')
+			const normalText = document.querySelector('.js-mv-text')
+			$("#mvSlider").on('beforeChange', (_event, _slick, _currentSlide, nextSlide) => {
+				if(modelHouseText && normalText) {
+					if(nextSlide !== 0) {
+						//たいせつなことがみえてくる。　を表示
+						normalText.classList.remove('-hide');
+						modelHouseText.classList.add('-hide');
+					} else {
+						//Like a modelhouse　を表示
+						normalText.classList.add('-hide');
+						modelHouseText.classList.remove('-hide');
+					}
+				}
+			})
 
 			$(".slickLink").slick({
 
