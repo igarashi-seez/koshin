@@ -33,6 +33,12 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 				<div id="mvSlider" class="mv-slider">
 					<div class="item item00">
 						<a href="https://www.mitsuihome-ksa.co.jp/reform/news/south/likeamodelhouse.php"></a>
+						<div class="reform-mv-text__button-wrapper">
+							<div class="reform-mv-text__button">
+								<div class="reform-mv-text__button-bg"></div>
+								詳しくはこちら
+							</div>
+						</div>
 					</div>
 					<div class="item item01"></div>
 					<div class="item item02"></div>
@@ -40,7 +46,7 @@ $description = "住宅リフォームなら三井のリフォーム 甲信アル
 					<div class="item item04"></div>
 					<div class="item item05"></div>
 					<div class="item item06"></div>
-					<div class="item item07"></div>
+					<!-- <div class="item item07"></div> -->
 					<div class="item item08"></div>
 					<div class="item item09"></div>
 					<div class="item item10"></div>
